@@ -6,6 +6,7 @@
 <title>Isabella Marques — Especialista em Cachos</title>
 <meta name="description" content="Salão especializado em cabelos ondulados, cacheados e crespos em Unaí/MG. Veja o catálogo de serviços com valores e agende direto pelo WhatsApp."/>
 <meta name="theme-color" content="#fbf0f3"/>
+<link rel="canonical" href="https://isabellamarquesnunes-cpu.github.io/"/>
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
 
@@ -46,7 +47,18 @@
     {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "16:00"}
   ],
   "priceRange": "R$100 - R$265",
-  "sameAs": ["https://www.instagram.com/isabellacachos_/"]
+  "sameAs": ["https://www.instagram.com/isabellacachos_/"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Serviços para cabelos com curvatura",
+    "itemListElement": [
+      {"@type":"Offer","priceCurrency":"BRL","price":"100","itemOffered":{"@type":"Service","name":"Corte Estratégico + Finalização + Secagem"}},
+      {"@type":"Offer","priceCurrency":"BRL","price":"140","itemOffered":{"@type":"Service","name":"Tratamento HNR + Vapor de Ozônio"}},
+      {"@type":"Offer","priceCurrency":"BRL","price":"170","itemOffered":{"@type":"Service","name":"Corte Estratégico + Tratamento HNR + Vapor de Ozônio"}},
+      {"@type":"Offer","priceCurrency":"BRL","price":"250","itemOffered":{"@type":"Service","name":"Combo Profundo"}},
+      {"@type":"Offer","priceCurrency":"BRL","price":"250","itemOffered":{"@type":"Service","name":"Peeling Capilar com Argila Preta e Carvão Ativado"}}
+    ]
+  }
 }
 </script>
 <style>
@@ -88,6 +100,10 @@ body::before{
 body.no-scroll{overflow:hidden;}
 a{color:inherit;}
 #servicos,#resultados,#processo,#horarios,#avaliacoes,#contato{scroll-margin-top:76px;}
+.skip-link{position:fixed;z-index:200;top:10px;left:10px;padding:10px 16px;border-radius:10px;background:var(--pink-dp);color:#fff;text-decoration:none;transform:translateY(-160%);}
+.skip-link:focus{transform:none;}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+a:focus-visible,button:focus-visible{outline:3px solid rgba(177,95,125,.48);outline-offset:3px;}
 
 /* TOPBAR */
 .topbar{
@@ -118,11 +134,11 @@ a{color:inherit;}
 
 /* HERO */
 .hero{
-  min-height:680px;
+  min-height:610px;
   display:flex;align-items:stretch;
   overflow:hidden;
   position:relative;
-  padding:32px 24px 24px;
+  padding:24px;
   background:
     radial-gradient(circle at 78% 22%, rgba(244,189,56,.30), transparent 22%),
     radial-gradient(circle at top right, rgba(186,138,80,.28), transparent 30%),
@@ -146,7 +162,7 @@ a{color:inherit;}
 .hero-content{
   flex:1;
   display:flex;align-items:center;
-  padding:32px 24px 46px 34px;
+  padding:26px 24px 34px 34px;
   z-index:2;
   max-width:56%;
 }
@@ -177,7 +193,7 @@ a{color:inherit;}
 .hero h1 em{font-style:italic;color:#6b2947;text-shadow:0 8px 28px rgba(177,95,125,.12);}
 .hero-sub{font-size:14px;color:var(--muted);margin-bottom:14px;letter-spacing:.8px;text-transform:uppercase;}
 .hero-lead{font-size:17px;line-height:1.8;color:#55434c;margin-bottom:16px;max-width:54ch;}
-.stars-row{display:flex;align-items:center;gap:10px;margin-bottom:18px;flex-wrap:wrap;}
+.stars-row{display:flex;align-items:center;gap:10px;margin-bottom:18px;flex-wrap:wrap;text-decoration:none;}
 .stars{color:#e0a93c;font-size:20px;letter-spacing:2px;}
 .stars-label{font-size:13px;color:#5f4e57;}
 
@@ -272,9 +288,9 @@ a{color:inherit;}
 /* HERO PHOTO — lateral, sem fundo */
 .hero-photo-side{
   flex:0 0 44%;
-  display:flex;align-items:flex-start;justify-content:center;
+  display:flex;align-items:stretch;justify-content:center;
   position:relative;overflow:hidden;
-  z-index:1;
+  z-index:1;border-radius:32px;
 }
 .hero-photo-side picture{display:contents;} /* o <picture> some do layout; o img segue como filho direto do flex */
 .hero-photo-side::after{
@@ -286,17 +302,16 @@ a{color:inherit;}
   background:radial-gradient(circle, rgba(83,97,75,.16), rgba(83,97,75,0) 72%);
 }
 .hero-photo-side img{
-  width:min(100%,520px);
-  max-width:520px;
-  object-fit:contain;
-  object-position:top center;
+  width:100%;
+  max-width:none;
+  object-fit:cover;
+  object-position:center 45%;
   display:block;
   height:100%;
-  max-height:680px;
+  max-height:620px;
   position:relative;
   z-index:2;
-  margin-top:-28px;
-  filter:drop-shadow(0 18px 30px rgba(52,28,39,.14));
+  margin:0;
 }
 
 /* HIGHLIGHTS */
@@ -313,6 +328,15 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(28px,3vw,44px);font-weig
 .h2-pink{color:#6b2947;}.h2-blue{color:#374635;}.h2-dark{color:#fff;}
 .divider{width:64px;height:3px;border-radius:999px;margin:0 auto 30px;}
 .divider-pink{background:linear-gradient(90deg,var(--gold),var(--pink));}.divider-blue{background:linear-gradient(90deg,#87957d,var(--blue));}.divider-gold{background:linear-gradient(90deg,#e6c9a0,var(--gold));}
+.why-section{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:54px;align-items:center;padding:86px clamp(24px,7vw,110px);background:linear-gradient(135deg,#f4ecdf,#f9f4ea);}
+.why-copy{max-width:560px;}
+.why-copy .divider{margin-left:0;}
+.why-copy>p{color:#5d6858;font-size:15px;line-height:1.85;}
+.why-grid{display:grid;gap:12px;}
+.why-card{display:grid;grid-template-columns:46px 1fr;column-gap:14px;padding:20px 22px;border:1px solid rgba(83,97,75,.14);border-radius:20px;background:rgba(255,255,255,.72);}
+.why-card>span{grid-row:1/3;display:grid;width:38px;height:38px;place-items:center;border-radius:50%;background:rgba(83,97,75,.11);color:var(--blue);font-size:11px;font-weight:800;}
+.why-card strong{color:var(--blue-dp);font-size:15px;}
+.why-card p{color:#667260;font-size:13px;line-height:1.65;}
 
 /* CATÁLOGO DE SERVIÇOS */
 .catalog-section{padding:84px 0 60px;text-align:center;}
@@ -325,6 +349,8 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(28px,3vw,44px);font-weig
   font-size:13px;font-weight:700;color:#6e5b49;box-shadow:var(--shadow-sm);
 }
 .catalog-note::before{content:'';width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--pink));flex-shrink:0;}
+.catalog-pdf-link{display:inline-flex;align-items:center;gap:8px;margin-top:16px;color:var(--burgundy);font-size:13px;font-weight:800;text-underline-offset:3px;}
+.catalog-pdf-link:hover{color:var(--pink);}
 
 .controls{
   position:sticky;top:63px;z-index:50;
@@ -484,7 +510,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(28px,3vw,44px);font-weig
   position:relative;flex:0 0 300px;height:430px;border-radius:26px;overflow:hidden;
   scroll-snap-align:center;cursor:zoom-in;
   border:1px solid rgba(177,95,125,.16);background:var(--pink-lt);
-  box-shadow:var(--shadow-md);
+  box-shadow:var(--shadow-md);padding:0;font:inherit;color:inherit;text-align:left;
   transition:transform .28s ease, box-shadow .28s ease;
 }
 .gcard.wide{flex-basis:430px;} /* antes & depois, quase quadradas */
@@ -587,7 +613,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(28px,3vw,44px);font-weig
 .review-text{font-size:14px;color:#4f3d46;line-height:1.85;margin-bottom:16px;font-style:italic;}
 .review-author{font-size:12px;color:#6b5860;letter-spacing:.8px;font-weight:800;}
 .review-meta{display:block;font-size:11px;color:#82707a;margin-top:5px;letter-spacing:.4px;}
-.review-total{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.9);border:1px solid rgba(177,95,125,.14);border-radius:999px;padding:14px 24px;font-size:14px;color:#61505a;box-shadow:0 12px 32px rgba(74,34,50,.08);}
+.review-total{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.9);border:1px solid rgba(177,95,125,.14);border-radius:999px;padding:14px 24px;font-size:14px;color:#61505a;box-shadow:0 12px 32px rgba(74,34,50,.08);text-decoration:none;}
 .review-total strong{color:#6b2947;font-size:16px;}
 
 /* FAQ */
@@ -699,10 +725,11 @@ footer span{color:#6b2947;}
 @media(max-width:920px){
   .topbar{padding:12px 18px;}
   .topbar-link{display:none;}
-  .hero{flex-direction:column;min-height:auto;padding:24px 16px 20px;}
-  .hero-content{max-width:100%;padding:24px 8px 12px;}
-  .hero-photo-side{flex:none;width:100%;min-height:390px;}
-  .hero-photo-side img{max-height:480px;}
+  .hero{flex-direction:column;min-height:auto;padding:20px 16px;}
+  .hero-content{max-width:100%;padding:22px 8px 18px;}
+  .hero-photo-side{flex:none;width:100%;height:360px;min-height:0;border-radius:26px;}
+  .hero-photo-side img{max-height:none;}
+  .why-section{grid-template-columns:1fr;gap:32px;padding:68px 24px;}
   .highlights-grid,.audience-grid,.differentials-grid,.process-grid,.faq-grid,.stats{grid-template-columns:1fr;}
   /* Sticky duplo comia a tela no celular: aqui os controles rolam junto */
   .controls{position:static;padding:14px 0 16px;}
@@ -742,8 +769,8 @@ footer span{color:#6b2947;}
   .stars-row{margin-bottom:13px;}
   .hero-ask{margin-bottom:13px;}
   .hero-ask-label{margin-bottom:7px;}
-  .hero-photo-side{min-height:230px;}
-  .hero-photo-side img{max-height:270px;width:100%;object-position:top;margin-top:-8px;}
+  .hero-photo-side{height:300px;min-height:0;}
+  .hero-photo-side img{max-height:none;width:100%;object-position:center 42%;margin:0;}
   .hero-cta-row{flex-direction:column;align-items:stretch;}
   .hero-cta-row .btn-wpp{justify-content:center;padding:14px 24px;}
   .ask-chip{font-size:13px;padding:7px 11px;}
@@ -800,6 +827,7 @@ footer span{color:#6b2947;}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#mainContent">Ir para o conteúdo principal</a>
 
 <header class="topbar">
   <a class="topbar-brand" href="#">
@@ -819,6 +847,7 @@ footer span{color:#6b2947;}
   </nav>
 </header>
 
+<main id="mainContent">
 <!-- HERO -->
 <section class="hero">
   <div class="petals" aria-hidden="true">
@@ -832,10 +861,10 @@ footer span{color:#6b2947;}
       <h1>Cachos bonitos, definidos<br><em>e com cara de você</em></h1>
       <p class="hero-sub">Salão de beleza especializado em cachos em Unaí, Minas Gerais</p>
       <p class="hero-lead">Corte, tratamento e finalização pensados para valorizar a sua curvatura com mais definição, saúde e leveza, sem tirar a identidade natural dos seus fios.</p>
-      <div class="stars-row">
+      <a class="stars-row" href="https://www.google.com/search?q=Isabella+Marques+Cachos+Unai+MG" target="_blank" rel="noopener" aria-label="Ver avaliações da Isabella no Google">
         <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="stars-label">5,0 no Google com 278 avaliações</span>
-      </div>
+      </a>
       <div class="hero-ask" id="heroAsk">
         <span class="hero-ask-label">Como está seu cabelo hoje?</span>
         <div class="ask-chips">
@@ -855,13 +884,14 @@ footer span{color:#6b2947;}
   </div>
   <div class="hero-photo-side">
     <picture>
-      <source srcset="hero-isabella.webp" type="image/webp"/>
-      <img src="hero-fallback.png" alt="Isabella Marques" width="800" height="1200" fetchpriority="high"/>
+      <source media="(max-width:680px)" srcset="hero-real-640.webp" type="image/webp"/>
+      <source srcset="hero-real-1000.webp" type="image/webp"/>
+      <img src="fotos/castanho-ondulado-sorriso.jpg" alt="Resultado real de cabelo ondulado realizado no salão Isabella Marques" width="1000" height="1350" fetchpriority="high"/>
     </picture>
     <div class="hero-quote">
       <span class="hero-quote-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-      <p>"Cheguei querendo mais definição e saí me sentindo muito mais bonita."</p>
-      <span class="hero-quote-author">Amanda R. · avaliação no Google</span>
+      <p>Resultado real, realizado no salão.</p>
+      <span class="hero-quote-author">Técnica, definição e movimento</span>
     </div>
   </div>
 </section>
@@ -883,6 +913,21 @@ footer span{color:#6b2947;}
   </div>
 </section>
 
+<!-- RESULTADOS -->
+<section class="gallery-section" id="resultados">
+  <div class="gallery-head">
+    <div class="sec-tag sec-tag-gold">Resultados de verdade</div>
+    <h2 class="h2-pink">Transformações feitas aqui, em cabelos reais</h2>
+    <div class="divider divider-gold"></div>
+    <p class="catalog-lead">Veja resultados realizados no salão em diferentes curvaturas. Toque em uma foto para ampliar.</p>
+  </div>
+  <div class="gallery-wrap">
+    <button class="gnav prev" type="button" id="gPrev" aria-label="Fotos anteriores">&#8249;</button>
+    <div class="gallery" id="gallery" aria-label="Galeria de resultados"></div>
+    <button class="gnav next" type="button" id="gNext" aria-label="Próximas fotos">&#8250;</button>
+  </div>
+</section>
+
 <!-- CATÁLOGO DE SERVIÇOS -->
 <section class="catalog-section" id="servicos">
   <div class="catalog-head">
@@ -891,11 +936,12 @@ footer span{color:#6b2947;}
     <div class="divider divider-pink"></div>
     <p class="catalog-lead">Compare valores, veja o que cada atendimento inclui e escolha como pagar. Quando decidir, o agendamento é direto pelo WhatsApp.</p>
     <div class="catalog-note">Todos os atendimentos incluem avaliação capilar e consultoria personalizada</div>
+    <div><a class="catalog-pdf-link" href="Catalogo-Isabella-Marques.pdf" target="_blank" rel="noopener">Baixar catálogo em PDF <span aria-hidden="true">↗</span></a></div>
   </div>
 
   <div class="controls">
     <div class="catalog-summary">
-      <p><strong id="resultsSummary">6 atendimentos disponíveis</strong></p>
+      <p><strong id="resultsSummary" aria-live="polite">6 atendimentos disponíveis</strong></p>
       <div class="summary-trust"><span>Avaliação inclusa</span><span>Consultoria personalizada</span></div>
     </div>
     <div class="controls-inner">
@@ -910,81 +956,28 @@ footer span{color:#6b2947;}
           <button class="pay-btn" type="button" data-pay="cartao" aria-pressed="false">Cartão</button>
           <button class="pay-btn" type="button" data-pay="parcelado" aria-pressed="false">Parcelado</button>
         </div>
+        <span class="sr-only" id="payAnnouncement" aria-live="polite"></span>
       </div>
     </div>
   </div>
 
   <div class="catalog-body">
     <div class="catalog-inner" id="grid"></div>
+    <noscript><p class="catalog-lead">Ative o JavaScript para filtrar os serviços ou <a href="Catalogo-Isabella-Marques.pdf">consulte o catálogo em PDF</a>.</p></noscript>
   </div>
 </section>
 
-<!-- RESULTADOS -->
-<section class="gallery-section" id="resultados">
-  <div class="gallery-head">
-    <div class="sec-tag sec-tag-gold">Resultados de verdade</div>
-    <h2 class="h2-pink">Transformações feitas aqui, em cabelos reais</h2>
-    <div class="divider divider-gold"></div>
-    <p class="catalog-lead">Arraste para o lado e veja o que a técnica certa faz por cada curvatura. Toque em uma foto para ampliar.</p>
+<section class="why-section" aria-labelledby="whyTitle">
+  <div class="why-copy reveal">
+    <div class="sec-tag sec-tag-blue">Por que escolher a Isabella</div>
+    <h2 class="h2-blue" id="whyTitle">Técnica para a sua curvatura. Escuta para a sua rotina.</h2>
+    <div class="divider divider-blue"></div>
+    <p>O atendimento começa entendendo o seu momento e termina com um resultado que você consegue reconhecer, manter e aproveitar fora do salão.</p>
   </div>
-  <div class="gallery-wrap">
-    <button class="gnav prev" type="button" id="gPrev" aria-label="Fotos anteriores">&#8249;</button>
-    <div class="gallery" id="gallery" aria-label="Galeria de resultados"></div>
-    <button class="gnav next" type="button" id="gNext" aria-label="Próximas fotos">&#8250;</button>
-  </div>
-</section>
-
-<!-- BIO -->
-<section class="bio">
-  <div class="bio-inner reveal">
-    <div class="sec-tag">Sobre o atendimento</div>
-    <h2 class="h2-pink">Cuidado especializado para valorizar a sua curvatura</h2>
-    <div class="divider divider-pink"></div>
-    <p class="bio-text">"Meu trabalho é cuidar dos seus fios com técnica, sensibilidade e respeito à sua curvatura. Cada atendimento é pensado para valorizar a textura natural do seu cabelo, melhorar definição, leveza e saúde dos fios, sem descaracterizar quem você é. Aqui, seu cabelo natural é tratado como beleza, identidade e potência."</p>
-  </div>
-</section>
-
-<section class="audience">
-  <div class="sec-tag">Para quem esse atendimento faz sentido</div>
-  <h2 class="h2-pink">Se você quer se sentir mais segura com o seu cabelo natural, você está no lugar certo</h2>
-  <div class="divider divider-pink"></div>
-  <div class="audience-grid">
-    <div class="audience-card reveal">
-      <h3>Seu cabelo perdeu forma</h3>
-      <p>Se os fios estão sem definição, sem caimento ou com volume desorganizado, o atendimento busca recuperar leitura, beleza e leveza da sua curvatura.</p>
-    </div>
-    <div class="audience-card reveal">
-      <h3>Você quer tratar melhor os fios</h3>
-      <p>Quando o cabelo pede mais hidratação, nutrição e orientação, a proposta é cuidar com técnica e indicar o que realmente faz sentido para você.</p>
-    </div>
-    <div class="audience-card reveal">
-      <h3>Você quer resultado com identidade</h3>
-      <p>A ideia não é padronizar o seu cabelo, e sim valorizar o que ele tem de mais bonito de forma coerente com seu estilo e sua rotina.</p>
-    </div>
-  </div>
-</section>
-
-<section class="differentials">
-  <div class="sec-tag sec-tag-blue">Por que tantas clientes confiam</div>
-  <h2 class="h2-blue">Diferenciais que deixam o atendimento mais seguro e mais personalizado</h2>
-  <div class="divider divider-blue"></div>
-  <div class="differentials-grid">
-    <div class="differential-card reveal">
-      <strong>Olhar treinado para cabelos com curvatura</strong>
-      <p>O atendimento considera forma, densidade, comportamento do fio e o que valoriza de verdade o seu cabelo.</p>
-    </div>
-    <div class="differential-card reveal">
-      <strong>Resultado bonito e funcional</strong>
-      <p>O objetivo é entregar um cabelo que você admire no espelho e consiga manter com mais consciência no dia a dia.</p>
-    </div>
-    <div class="differential-card reveal">
-      <strong>Escuta antes de qualquer decisão</strong>
-      <p>Cada escolha parte do seu objetivo, da condição atual dos fios e do tipo de resultado que faz sentido para você.</p>
-    </div>
-    <div class="differential-card reveal">
-      <strong>Técnica, cuidado e consistência</strong>
-      <p>É isso que sustenta as avaliações, as indicações entre clientes e a confiança construída ao longo dos anos.</p>
-    </div>
+  <div class="why-grid">
+    <article class="why-card reveal"><span>01</span><strong>Avaliação individual</strong><p>Forma, densidade, histórico e objetivo orientam cada escolha.</p></article>
+    <article class="why-card reveal"><span>02</span><strong>Especialização em curvaturas</strong><p>Ondulados, cacheados e crespos tratados sem perder identidade.</p></article>
+    <article class="why-card reveal"><span>03</span><strong>Orientação para casa</strong><p>Você entende como manter definição, saúde e caimento na rotina.</p></article>
   </div>
 </section>
 
@@ -1016,30 +1009,6 @@ footer span{color:#6b2947;}
   </div>
 </section>
 
-<!-- STATS -->
-<section class="stats-section">
-  <div class="sec-tag sec-tag-blue">Confiança construída no atendimento</div>
-  <h2 class="h2-blue">Resultados que mostram consistência</h2>
-  <div class="divider divider-blue"></div>
-  <div class="stats">
-    <div class="stat reveal"><div class="stat-num" data-count="5" data-prefix="+">+5</div><div class="stat-label">Anos dedicados ao cuidado com curvatura</div></div>
-    <div class="stat reveal"><div class="stat-num" data-count="278">278</div><div class="stat-label">Avaliações no Google com nota 5,0</div></div>
-    <div class="stat reveal"><div class="stat-num" data-count="100" data-suffix="%">100%</div><div class="stat-label">Atendimento voltado para cabelos com curvatura</div></div>
-  </div>
-</section>
-
-<!-- HORÁRIOS -->
-<section class="horarios" id="horarios">
-  <div class="sec-tag">Funcionamento</div>
-  <h2 class="h2-pink">Horários de atendimento</h2>
-  <div class="divider divider-pink"></div>
-  <div class="horario-grid">
-    <div class="horario-row reveal"><span class="horario-day">Segunda a Sexta</span><span class="horario-time">13h às 18h</span></div>
-    <div class="horario-row reveal"><span class="horario-day">Sábado</span><span class="horario-time">08h às 16h</span></div>
-    <div class="horario-row reveal" style="opacity:.6;"><span class="horario-day">Domingo</span><span class="horario-time">Fechado</span></div>
-  </div>
-</section>
-
 <!-- AVALIAÇÕES -->
 <section class="reviews-section" id="avaliacoes">
   <div class="sec-tag">Prova social que gera confiança</div>
@@ -1062,10 +1031,10 @@ footer span{color:#6b2947;}
       <div class="review-author">Juliana M. <span class="review-meta">crespa | hidratação e corte</span></div>
     </div>
   </div>
-  <div class="review-total">
+  <a class="review-total" href="https://www.google.com/search?q=Isabella+Marques+Cachos+Unai+MG" target="_blank" rel="noopener" aria-label="Ver as avaliações da Isabella no Google">
     <span style="color:#f5c518;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-    <span><strong>278</strong> avaliações com nota 5,0 no Google</span>
-  </div>
+    <span><strong>278</strong> avaliações com nota 5,0 no Google · ver avaliações</span>
+  </a>
 </section>
 
 <section class="faq-section">
@@ -1125,6 +1094,8 @@ footer span{color:#6b2947;}
     </div>
   </div>
 </section>
+
+</main>
 
 <footer>
   <p><span>Isabella Marques</span> · Especialista em cabelos ondulados, cacheados e crespos · Unaí/MG<br/>Valores sujeitos a alteração.</p>
@@ -1232,8 +1203,6 @@ const SERVICOS = [
     preco:{pix:250, cartao:265, parcelas:{n:3, valor:89}}
   },
   {
-    /* ⚠️ PENDENTE — o texto original veio cortado em "+ Óle…" e SEM preço.
-       Completar a lista de itens e preencher `preco` quando a Isabella confirmar. */
     id:'combo-umectacao',
     nome:'Combo Umectação Profissional (Lipidioterapia)',
     categoria:'combo',
@@ -1247,18 +1216,17 @@ const SERVICOS = [
       'Óleo de semente de uva',
       'Óleo de pimenta rosa'
     ],
+    consultaTexto:'O valor é definido após avaliar comprimento, densidade e volume dos fios.',
     preco:null
   },
   {
     id:'peeling-terapeutico',
-    nome:'Peeling Terapêutico com Argila Preta & Carvão Ativado',
+    nome:'Peeling Capilar com Argila Preta & Carvão Ativado',
     categoria:'profundo',
     icone:'🌿',
-    tagline:'O tratamento mais profundo do salão',
-    fit:'Quem precisa cuidar do couro cabeludo — é o protocolo mais profundo do salão.',
-    /* ⚠️ PENDENTE — o texto original veio cortado em "como dermatite, ps…".
-       Completar a lista de condições quando a Isabella confirmar. */
-    desc:'Também é um tratamento anti-inflamatório capilar, altamente eficaz no controle de inflamações do couro cabeludo, como dermatite.',
+    tagline:'Limpeza profunda e cuidado técnico do couro cabeludo',
+    fit:'Quem busca limpeza profunda e cuidado técnico para o couro cabeludo.',
+    desc:'Protocolo de limpeza profunda e cuidado do couro cabeludo com argila preta, carvão ativado e vapor de ozônio. Não substitui avaliação dermatológica.',
     inclui:[
       'Peeling capilar detox',
       'Acidificação com vitaminas e aminoácidos',
@@ -1302,7 +1270,8 @@ const resultsSummary = document.getElementById('resultsSummary');
 
 let filtro = 'todos';
 let pagamento = 'pix';
-let ultimoFoco = null;
+let ultimoFocoModal = null;
+let ultimoFocoFoto = null;
 
 const brl = n => 'R$ ' + n.toLocaleString('pt-BR', {minimumFractionDigits:0});
 
@@ -1316,7 +1285,7 @@ const iconeWpp = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.3
 function precoCard(s){
   if(!s.preco){
     return '<div class="price-main"><span class="price-value consulta">Sob consulta</span></div>' +
-           '<p class="price-alt">Me chame no WhatsApp para saber o valor deste atendimento.</p>';
+           '<p class="price-alt">' + (s.consultaTexto || 'Me chame no WhatsApp para saber o valor deste atendimento.') + '</p>';
   }
   const p = s.preco;
   let valor, caption, alt;
@@ -1404,6 +1373,7 @@ function aplicarFiltro(cat){
   filtro = cat;
   chipsBox.querySelectorAll('.chip').forEach(ch => ch.setAttribute('aria-pressed', ch.dataset.cat === cat));
   render();
+  medir('service_filter', {categoria:cat});
 }
 
 /* ── HERO: pergunta interativa ── */
@@ -1436,12 +1406,13 @@ function initHeroAsk(){
 function montarGaleria(){
   const box = document.getElementById('gallery');
   if(!box) return;
+  const thumbFor = src => 'fotos/thumbs/' + src.split('/').pop().replace(/\.jpe?g$/i, '.webp');
   const cards = GALERIA.map((f, i) =>
-    '<figure class="gcard' + (f.wide ? ' wide' : '') + '" data-foto="' + i + '">' +
+    '<button class="gcard' + (f.wide ? ' wide' : '') + '" type="button" data-foto="' + i + '" aria-label="Ampliar: ' + f.legenda + '">' +
       (f.badge ? '<span class="gbadge">' + f.badge + '</span>' : '') +
-      '<img src="' + f.img + '" alt="' + f.legenda + '" loading="lazy" decoding="async"/>' +
-      '<figcaption class="gcard-caption">' + f.legenda + '</figcaption>' +
-    '</figure>'
+      '<img src="' + thumbFor(f.img) + '" alt="' + f.legenda + '" width="640" height="760" loading="lazy" decoding="async"/>' +
+      '<span class="gcard-caption">' + f.legenda + '</span>' +
+    '</button>'
   ).join('');
   box.innerHTML = cards +
     '<a class="gcard gcard-cta" href="https://www.instagram.com/isabellacachos_/" target="_blank" rel="noopener">' +
@@ -1466,21 +1437,22 @@ const lbCaption = document.getElementById('lbCaption');
 let fotoAtual = 0;
 
 function abrirFoto(i){
+  if(!lb.classList.contains('open')) ultimoFocoFoto = document.activeElement;
   fotoAtual = i;
   const f = GALERIA[i];
   lbImg.src = f.img;
   lbImg.alt = f.legenda;
   lbCaption.textContent = f.legenda;
-  ultimoFoco = document.activeElement;
   lb.classList.add('open');
   document.body.classList.add('no-scroll');
   document.getElementById('lbFechar').focus();
+  medir('gallery_open', {foto:f.img});
 }
 function fecharFoto(){
   lb.classList.remove('open');
   document.body.classList.remove('no-scroll');
   lbImg.src = '';
-  if(ultimoFoco) ultimoFoco.focus();
+  if(ultimoFocoFoto) ultimoFocoFoto.focus();
 }
 function navegarFoto(dir){
   abrirFoto((fotoAtual + dir + GALERIA.length) % GALERIA.length);
@@ -1496,7 +1468,7 @@ if(lb){
 function abrir(id){
   const s = SERVICOS.find(x => x.id === id);
   if(!s) return;
-  ultimoFoco = document.activeElement;
+  ultimoFocoModal = document.activeElement;
 
   const precos = s.preco
     ? '<div class="modal-block"><div class="modal-block-title">Valores</div><div class="modal-prices">' +
@@ -1528,16 +1500,23 @@ function abrir(id){
   backdrop.classList.add('open');
   document.body.classList.add('no-scroll');
   document.getElementById('fechar').focus();
+  medir('service_open', {servico:id});
 }
 
 function fechar(){
   backdrop.classList.remove('open');
   document.body.classList.remove('no-scroll');
   modal.innerHTML = '';
-  if(ultimoFoco) ultimoFoco.focus();
+  if(ultimoFocoModal) ultimoFocoModal.focus();
 }
 
 /* ── EVENTOS ── */
+function medir(evento, dados = {}){
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({event:evento, ...dados});
+  if(typeof gtag === 'function') gtag('event', evento, dados);
+}
+
 chipsBox.addEventListener('click', e => {
   const b = e.target.closest('[data-cat]');
   if(b) aplicarFiltro(b.dataset.cat);
@@ -1549,6 +1528,8 @@ document.querySelector('.pay-switch').addEventListener('click', e => {
   pagamento = b.dataset.pay;
   document.querySelectorAll('.pay-btn').forEach(p => p.setAttribute('aria-pressed', p === b));
   render();
+  document.getElementById('payAnnouncement').textContent = 'Valores atualizados para a opção ' + b.textContent.trim();
+  medir('payment_option', {opcao:pagamento});
 });
 
 grid.addEventListener('click', e => {
@@ -1560,12 +1541,23 @@ backdrop.addEventListener('click', e => {
   if(e.target === backdrop || e.target.closest('#fechar')) fechar();
 });
 
+function manterFoco(evento, container){
+  if(evento.key !== 'Tab') return;
+  const itens = [...container.querySelectorAll('a[href],button:not([disabled]),[tabindex]:not([tabindex="-1"])')].filter(el => el.offsetParent !== null);
+  if(!itens.length) return;
+  const primeiro = itens[0], ultimo = itens[itens.length - 1];
+  if(evento.shiftKey && document.activeElement === primeiro){evento.preventDefault();ultimo.focus();}
+  else if(!evento.shiftKey && document.activeElement === ultimo){evento.preventDefault();primeiro.focus();}
+}
+
 document.addEventListener('keydown', e => {
   if(e.key === 'Escape' && backdrop.classList.contains('open')) fechar();
+  if(backdrop.classList.contains('open')) manterFoco(e, modal);
   if(lb && lb.classList.contains('open')){
     if(e.key === 'Escape') fecharFoto();
     if(e.key === 'ArrowLeft') navegarFoto(-1);
     if(e.key === 'ArrowRight') navegarFoto(1);
+    manterFoco(e, lb);
   }
 });
 
@@ -1614,14 +1606,11 @@ function initStats(){
 }
 
 /* ── MEDIÇÃO ──
-   Quando o site estiver publicado com Google Analytics 4 instalado (cole o
-   snippet do GA4 no <head>), cada clique de WhatsApp vira o evento
-   "whatsapp_click" automaticamente — sem GA4 instalado, não faz nada. */
+   Os eventos ficam disponíveis em dataLayer e também são enviados ao GA4
+   quando um snippet válido do Google Analytics for adicionado ao <head>. */
 document.addEventListener('click', e => {
   const a = e.target.closest('a[href*="wa.me"]');
-  if(a && typeof gtag === 'function'){
-    gtag('event', 'whatsapp_click', {origem: a.id || a.className.split(' ')[0] || 'link'});
-  }
+  if(a) medir('whatsapp_click', {origem:a.id || a.className.split(' ')[0] || 'link'});
 });
 
 montarChips();
