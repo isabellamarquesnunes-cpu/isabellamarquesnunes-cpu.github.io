@@ -1,0 +1,1616 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Isabella Marques — Especialista em Cachos</title>
+<meta name="description" content="Salão especializado em cabelos ondulados, cacheados e crespos em Unaí/MG. Veja o catálogo de serviços com valores e agende direto pelo WhatsApp."/>
+<meta name="theme-color" content="#fbf0f3"/>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"/>
+<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+
+<!-- Prévia ao compartilhar (WhatsApp/Instagram/Facebook).
+     Se um dia migrar para domínio próprio, trocar https://isabellamarquesnunes-cpu.github.io pelo novo endereço. -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://isabellamarquesnunes-cpu.github.io/"/>
+<meta property="og:title" content="Isabella Marques — Especialista em Cachos | Unaí/MG"/>
+<meta property="og:description" content="Cortes estratégicos, tratamentos com vapor de ozônio e consultoria capilar. Veja os valores e agende pelo WhatsApp."/>
+<meta property="og:image" content="https://isabellamarquesnunes-cpu.github.io/og-image.jpg"/>
+<meta property="og:locale" content="pt_BR"/>
+<meta name="twitter:card" content="summary_large_image"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+
+<!-- Dados de negócio local para o Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "Isabella Marques — Especialista em Cachos",
+  "description": "Salão especializado em cabelos ondulados, cacheados e crespos em Unaí/MG.",
+  "image": "https://isabellamarquesnunes-cpu.github.io/og-image.jpg",
+  "url": "https://isabellamarquesnunes-cpu.github.io/",
+  "telephone": "+5538999117983",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "R. Santa Luzia, 283 - Cachoeira",
+    "addressLocality": "Unaí",
+    "addressRegion": "MG",
+    "postalCode": "38610-280",
+    "addressCountry": "BR"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "13:00", "closes": "18:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "16:00"}
+  ],
+  "priceRange": "R$100 - R$265",
+  "sameAs": ["https://www.instagram.com/isabellacachos_/"]
+}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --pink:#b15f7d;
+  --pink-dp:#6b2947;
+  --pink-lt:#f7edf1;
+  --pink-md:#e5ccd5;
+  --blue:#53614b;
+  --blue-dp:#374635;
+  --blue-lt:#f4ecdf;
+  --blue-md:#caba9f;
+  --gold:#ba8a50;
+  --text:#2f2430;
+  --muted:#7c6c74;
+  --white:#fff;
+  --shadow-sm:0 12px 28px rgba(74,34,50,.06);
+  --shadow-md:0 12px 32px rgba(74,34,50,.08);
+  --shadow-lg:0 18px 50px rgba(74,34,50,.12);
+}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Nunito',sans-serif;
+  color:var(--text);
+  background:radial-gradient(circle at top left, rgba(177,95,125,.10), transparent 28%),linear-gradient(180deg,#fffdfb 0%,#fff7f2 48%,#fffdfa 100%);
+  overflow-x:hidden;
+}
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.24) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.24) 1px, transparent 1px);
+  background-size:32px 32px;
+  opacity:.18;
+  pointer-events:none;
+  z-index:-1;
+}
+body.no-scroll{overflow:hidden;}
+a{color:inherit;}
+#servicos,#resultados,#processo,#horarios,#avaliacoes,#contato{scroll-margin-top:76px;}
+
+/* TOPBAR */
+.topbar{
+  position:sticky;top:0;z-index:60;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:14px 28px;
+  background:rgba(255,251,248,.86);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(186,138,80,.14);
+}
+.topbar-brand{font-family:'Playfair Display',serif;font-size:19px;color:var(--pink-dp);text-decoration:none;letter-spacing:.3px;}
+.topbar-brand small{display:block;font-family:'Nunito',sans-serif;font-size:9px;letter-spacing:2.4px;text-transform:uppercase;color:#9a838e;margin-top:2px;font-weight:700;}
+.topbar-nav{display:flex;align-items:center;gap:10px;}
+.topbar-link{
+  font-size:13px;font-weight:700;color:#6f5e66;text-decoration:none;
+  padding:9px 14px;border-radius:999px;transition:background .22s ease,color .22s ease;
+}
+.topbar-link:hover{background:rgba(177,95,125,.08);color:var(--pink-dp);}
+.topbar-cta{
+  display:inline-flex;align-items:center;gap:8px;
+  background:linear-gradient(135deg,#22c35e,#27d367);color:#fff;
+  font-size:13px;font-weight:800;padding:11px 18px;border-radius:999px;text-decoration:none;
+  box-shadow:0 12px 24px rgba(37,211,102,.22);
+  transition:transform .24s ease, box-shadow .24s ease;
+}
+.topbar-cta:hover{transform:translateY(-2px);box-shadow:0 16px 30px rgba(37,211,102,.3);}
+.topbar-cta svg{width:16px;height:16px;fill:#fff;flex-shrink:0;}
+
+/* HERO */
+.hero{
+  min-height:680px;
+  display:flex;align-items:stretch;
+  overflow:hidden;
+  position:relative;
+  padding:32px 24px 24px;
+  background:
+    radial-gradient(circle at 78% 22%, rgba(244,189,56,.30), transparent 22%),
+    radial-gradient(circle at top right, rgba(186,138,80,.28), transparent 30%),
+    radial-gradient(circle at 18% 22%, rgba(177,95,125,.20), transparent 32%),
+    linear-gradient(135deg, #fbf0f3 0%, #f8f0de 48%, #f4eadf 100%);
+}
+.hero::before,.hero::after{
+  content:'';
+  position:absolute;
+  border-radius:999px;
+  pointer-events:none;
+}
+.hero::before{
+  width:420px;height:420px;right:-120px;top:38px;
+  background:radial-gradient(circle, rgba(255,244,210,.78), rgba(255,255,255,0));
+}
+.hero::after{
+  width:240px;height:240px;left:-90px;bottom:-40px;
+  background:radial-gradient(circle, rgba(177,95,125,.18), rgba(177,95,125,0));
+}
+.hero-content{
+  flex:1;
+  display:flex;align-items:center;
+  padding:32px 24px 46px 34px;
+  z-index:2;
+  max-width:56%;
+}
+.hero-text{
+  max-width:640px;
+  padding:0;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:10px;letter-spacing:2.8px;text-transform:uppercase;
+  color:#81586c;
+  border:none;
+  background:transparent;
+  padding:0;
+  margin-bottom:18px;
+}
+.hero-badge::before{
+  content:'';
+  width:8px;height:8px;border-radius:50%;
+  background:linear-gradient(135deg,var(--gold),var(--pink));
+  box-shadow:none;
+}
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(40px,4.8vw,70px);font-weight:400;
+  color:var(--text);line-height:1.03;margin-bottom:14px;
+}
+.hero h1 em{font-style:italic;color:#6b2947;text-shadow:0 8px 28px rgba(177,95,125,.12);}
+.hero-sub{font-size:14px;color:var(--muted);margin-bottom:14px;letter-spacing:.8px;text-transform:uppercase;}
+.hero-lead{font-size:17px;line-height:1.8;color:#55434c;margin-bottom:16px;max-width:54ch;}
+.stars-row{display:flex;align-items:center;gap:10px;margin-bottom:18px;flex-wrap:wrap;}
+.stars{color:#e0a93c;font-size:20px;letter-spacing:2px;}
+.stars-label{font-size:13px;color:#6d5b64;}
+
+/* HERO — pergunta interativa: a visitante escolhe e o WhatsApp já vai pronto */
+.hero-ask{margin:0 0 20px;}
+.hero-ask-label{display:block;font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:#81586c;font-weight:800;margin-bottom:10px;}
+/* opções em texto, sem cara de botão — só a escolhida vira pílula */
+.ask-chips{display:flex;gap:4px 10px;flex-wrap:wrap;}
+.ask-chip{
+  font-family:'Nunito',sans-serif;font-size:13.5px;font-weight:700;
+  padding:7px 12px;border:none;border-radius:999px;cursor:pointer;white-space:nowrap;
+  color:#7c6c74;background:transparent;
+  text-decoration:underline dashed rgba(177,95,125,.4);
+  text-underline-offset:4px;text-decoration-thickness:1px;
+  transition:all .22s ease;
+}
+.ask-chip:hover{color:var(--pink-dp);text-decoration-color:rgba(177,95,125,.8);}
+.ask-chip[aria-pressed="true"]{
+  background:linear-gradient(135deg,var(--pink),var(--pink-dp));
+  color:#fff;text-decoration:none;
+  box-shadow:0 10px 22px rgba(107,41,71,.24);
+}
+.btn-pop{animation:btnPop .35s ease;}
+@keyframes btnPop{50%{transform:scale(1.05);}}
+
+/* HERO — depoimento flutuando junto da foto */
+.hero-quote{
+  position:absolute;left:4%;bottom:9%;z-index:3;max-width:240px;
+  text-align:left;padding:14px 16px;border-radius:20px;
+  background:rgba(255,252,248,.92);border:1px solid rgba(255,255,255,.85);
+  box-shadow:0 18px 44px rgba(74,34,50,.18);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  animation:flutua 5.5s ease-in-out infinite alternate;
+}
+.hero-quote-stars{color:#e0a93c;font-size:12px;letter-spacing:2px;}
+.hero-quote p{font-family:'Playfair Display',serif;font-style:italic;font-size:14.5px;color:#55434c;line-height:1.5;margin:5px 0 6px;}
+.hero-quote-author{font-size:10.5px;color:#9a838e;font-weight:700;letter-spacing:.4px;}
+@keyframes flutua{from{transform:translateY(0);}to{transform:translateY(-10px);}}
+
+/* HERO — pétalas de cerejeira, discretas, atrás do conteúdo */
+.petals{position:absolute;inset:0;pointer-events:none;z-index:1;overflow:hidden;}
+.petal{
+  position:absolute;top:-26px;width:14px;height:12px;
+  border-radius:58% 42% 60% 40% / 55% 60% 40% 45%;
+  background:linear-gradient(135deg, rgba(240,182,205,.85), rgba(177,95,125,.5));
+  animation:cai linear infinite;
+}
+@keyframes cai{
+  0%{opacity:0;transform:translate3d(0,0,0) rotate(0deg);}
+  6%{opacity:.5;}
+  82%{opacity:.45;}
+  100%{opacity:0;transform:translate3d(7vw,880px,0) rotate(300deg);}
+}
+.petal:nth-child(1){left:6%;animation-duration:11s;animation-delay:0s;}
+.petal:nth-child(2){left:16%;animation-duration:14s;animation-delay:3.2s;transform:scale(.8);}
+.petal:nth-child(3){left:27%;animation-duration:12s;animation-delay:6.5s;}
+.petal:nth-child(4){left:38%;animation-duration:15s;animation-delay:1.6s;transform:scale(.7);}
+.petal:nth-child(5){left:50%;animation-duration:12.5s;animation-delay:4.8s;}
+.petal:nth-child(6){left:61%;animation-duration:14.5s;animation-delay:8s;transform:scale(.85);}
+.petal:nth-child(7){left:72%;animation-duration:11.5s;animation-delay:2.4s;}
+.petal:nth-child(8){left:84%;animation-duration:13.5s;animation-delay:5.6s;transform:scale(.75);}
+.petal:nth-child(9){left:93%;animation-duration:12s;animation-delay:7.2s;}
+
+/* HERO — entrada em cascata (só com JS ativo) */
+@keyframes heroIn{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:none;}}
+@keyframes quoteIn{from{opacity:0;}to{opacity:1;}}
+.js .hero-text>*{animation:heroIn .6s cubic-bezier(.2,.7,.3,1) both;}
+.js .hero-text>*:nth-child(1){animation-delay:.05s;}
+.js .hero-text>*:nth-child(2){animation-delay:.13s;}
+.js .hero-text>*:nth-child(3){animation-delay:.21s;}
+.js .hero-text>*:nth-child(4){animation-delay:.29s;}
+.js .hero-text>*:nth-child(5){animation-delay:.37s;}
+.js .hero-text>*:nth-child(6){animation-delay:.45s;}
+.js .hero-text>*:nth-child(7){animation-delay:.53s;}
+.js .hero-photo-side img{animation:heroIn .7s cubic-bezier(.2,.7,.3,1) .3s both;}
+.js .hero-quote{animation:quoteIn .6s ease .95s both, flutua 5.5s ease-in-out 1.6s infinite alternate;}
+
+/* HERO — CTA */
+.hero-cta-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+
+.btn-wpp{
+  display:inline-flex;align-items:center;gap:10px;
+  background:linear-gradient(135deg,#22c35e,#27d367);color:#fff;
+  font-family:'Nunito',sans-serif;font-size:15px;font-weight:800;
+  padding:15px 28px;border-radius:999px;
+  text-decoration:none;transition:transform .24s ease, box-shadow .24s ease, opacity .24s ease;
+  box-shadow:0 18px 34px rgba(37,211,102,.22);
+}
+.btn-wpp:hover{opacity:1;transform:translateY(-2px);box-shadow:0 20px 38px rgba(37,211,102,.28);}
+.btn-wpp svg{width:20px;height:20px;fill:#fff;flex-shrink:0;}
+
+/* HERO PHOTO — lateral, sem fundo */
+.hero-photo-side{
+  flex:0 0 44%;
+  display:flex;align-items:flex-start;justify-content:center;
+  position:relative;overflow:hidden;
+  z-index:1;
+}
+.hero-photo-side picture{display:contents;} /* o <picture> some do layout; o img segue como filho direto do flex */
+.hero-photo-side::after{
+  content:'';
+  position:absolute;
+  inset:auto 14% 9% 14%;
+  height:40%;
+  border-radius:999px;
+  background:radial-gradient(circle, rgba(83,97,75,.16), rgba(83,97,75,0) 72%);
+}
+.hero-photo-side img{
+  width:min(100%,520px);
+  max-width:520px;
+  object-fit:contain;
+  object-position:top center;
+  display:block;
+  height:100%;
+  max-height:680px;
+  position:relative;
+  z-index:2;
+  margin-top:-28px;
+  filter:drop-shadow(0 18px 30px rgba(52,28,39,.14));
+}
+
+/* HIGHLIGHTS */
+.highlights{padding:14px 24px 10px;margin-top:-8px;z-index:3;}
+.highlights-grid{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}
+.highlight-item{padding:14px 20px;text-align:center;background:linear-gradient(180deg, rgba(255,251,247,.68), rgba(255,246,235,.5));border:1px solid rgba(186,138,80,.10);border-radius:24px;box-shadow:0 12px 28px rgba(102,67,41,.05);}
+.highlight-item strong{display:block;font-size:14px;color:#6b2947;margin-bottom:6px;letter-spacing:.3px;}
+.highlight-item span{font-size:13px;color:#6f5e66;line-height:1.7;}
+
+/* SHARED */
+.sec-tag{display:inline-block;font-size:10px;letter-spacing:2.8px;text-transform:uppercase;color:var(--pink);margin-bottom:12px;font-weight:800;}
+.sec-tag-blue{color:var(--blue);}.sec-tag-gold{color:var(--gold);}
+h2{font-family:'Playfair Display',serif;font-size:clamp(28px,3vw,44px);font-weight:400;line-height:1.15;margin-bottom:12px;}
+.h2-pink{color:#6b2947;}.h2-blue{color:#374635;}.h2-dark{color:#fff;}
+.divider{width:64px;height:3px;border-radius:999px;margin:0 auto 30px;}
+.divider-pink{background:linear-gradient(90deg,var(--gold),var(--pink));}.divider-blue{background:linear-gradient(90deg,#87957d,var(--blue));}.divider-gold{background:linear-gradient(90deg,#e6c9a0,var(--gold));}
+
+/* CATÁLOGO DE SERVIÇOS */
+.catalog-section{padding:84px 0 60px;text-align:center;}
+.catalog-head{max-width:820px;margin:0 auto 32px;padding:0 24px;}
+.catalog-lead{font-size:15px;color:#6f5e66;line-height:1.85;max-width:58ch;margin:0 auto 20px;}
+.catalog-note{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:12px 20px;border-radius:999px;
+  background:rgba(255,250,245,.8);border:1px solid rgba(186,138,80,.2);
+  font-size:13px;font-weight:700;color:#6e5b49;box-shadow:var(--shadow-sm);
+}
+.catalog-note::before{content:'';width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--pink));flex-shrink:0;}
+
+.controls{
+  position:sticky;top:63px;z-index:50;
+  padding:18px 28px;text-align:left;
+  background:rgba(255,252,249,.9);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-top:1px solid rgba(186,138,80,.12);
+  border-bottom:1px solid rgba(186,138,80,.12);
+}
+.controls-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+.catalog-summary{
+  max-width:1180px;margin:0 auto 14px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+  color:#8a7680;font-size:12px;
+}
+.catalog-summary strong{color:var(--pink-dp);font-weight:800;}
+.summary-trust{display:flex;align-items:center;gap:18px;flex-wrap:wrap;}
+.summary-trust span{display:inline-flex;align-items:center;gap:7px;}
+.summary-trust span::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.control-block{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.control-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#9a838e;font-weight:800;}
+
+.chips{display:flex;gap:8px;flex-wrap:wrap;}
+.chip{
+  font-family:'Nunito',sans-serif;font-size:13px;font-weight:700;
+  padding:10px 18px;border-radius:999px;cursor:pointer;
+  color:#6f5e66;background:rgba(255,255,255,.8);
+  border:1px solid rgba(177,95,125,.16);
+  transition:all .22s ease;
+  white-space:nowrap;flex-shrink:0; /* nunca quebrar/encolher texto dentro do chip */
+}
+.chip:hover{border-color:rgba(177,95,125,.34);color:var(--pink-dp);}
+.chip[aria-pressed="true"]{
+  background:linear-gradient(135deg,var(--pink),var(--pink-dp));
+  color:#fff;border-color:transparent;
+  box-shadow:0 10px 22px rgba(107,41,71,.24);
+}
+.chip .chip-count{opacity:.6;font-weight:600;margin-left:4px;}
+
+.pay-switch{display:inline-flex;padding:4px;border-radius:999px;background:rgba(83,97,75,.08);border:1px solid rgba(83,97,75,.14);gap:2px;}
+.pay-btn{
+  font-family:'Nunito',sans-serif;font-size:12px;font-weight:800;
+  padding:9px 15px;border-radius:999px;cursor:pointer;border:none;
+  background:transparent;color:#667260;transition:all .22s ease;white-space:nowrap;
+}
+.pay-btn:hover{color:var(--blue-dp);}
+.pay-btn[aria-pressed="true"]{background:var(--white);color:var(--blue-dp);box-shadow:0 4px 12px rgba(55,70,53,.12);}
+
+.catalog-body{padding:44px 28px 0;text-align:left;}
+.catalog-inner{max-width:1180px;margin:0 auto;}
+.category-section{animation:rise .38s ease both;}
+.category-heading{
+  display:flex;align-items:end;justify-content:space-between;gap:24px;
+  margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid rgba(177,95,125,.14);
+}
+.category-kicker{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:800;margin-bottom:5px;}
+.category-heading h2{font-family:'Playfair Display',serif;font-weight:400;font-size:30px;line-height:1.15;color:var(--pink-dp);margin-bottom:0;}
+.category-heading p{max-width:470px;color:var(--muted);font-size:12.5px;line-height:1.65;text-align:right;}
+.category-count{display:inline-flex;align-items:center;gap:6px;color:#8a7680;font-size:11px;font-weight:800;white-space:nowrap;}
+.catalog-grid{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;
+  align-items:stretch; /* cards da mesma linha com altura igual → preços alinhados */
+}
+.svc{
+  position:relative;overflow:hidden;
+  display:flex;flex-direction:column;min-height:700px;
+  background:linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,248,243,.94));
+  border:1px solid rgba(177,95,125,.14);border-radius:26px;
+  padding:28px 26px 24px;
+  box-shadow:var(--shadow-md);
+  transition:transform .24s ease, box-shadow .24s ease, border-color .24s ease;
+  animation:rise .38s ease both;
+}
+.svc::before{content:'';position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,var(--pink),var(--gold));opacity:.45;}
+.svc.combo-card::before{background:linear-gradient(90deg,var(--blue),#91a087);}
+.svc.profundo-card::before{background:linear-gradient(90deg,var(--gold),#7c5c2b);}
+.svc-main{display:flex;flex:1;flex-direction:column;}
+.svc-fit{display:flex;align-items:flex-start;gap:9px;min-height:104px;margin:0 0 16px;padding:12px 14px;background:rgba(177,95,125,.055);border-radius:14px;color:#6f5e66;font-size:12px;line-height:1.55;}
+.svc-fit strong{color:var(--pink-dp);white-space:nowrap;}
+.svc-fit span{display:-webkit-box;overflow:hidden;text-align:left;-webkit-line-clamp:4;-webkit-box-orient:vertical;}
+.svc:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:rgba(177,95,125,.3);}
+@keyframes rise{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+
+.svc-top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:16px;}
+.svc-icon{
+  width:54px;height:54px;border-radius:18px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;font-size:26px;
+  background:linear-gradient(135deg, rgba(186,138,80,.18), rgba(177,95,125,.16));
+}
+.svc-cat{
+  font-size:9px;letter-spacing:1.8px;text-transform:uppercase;font-weight:800;
+  padding:7px 12px;border-radius:999px;white-space:nowrap;
+}
+.svc-cat.simples{color:#6f5e66;background:rgba(177,95,125,.08);}
+.svc-cat.combo{color:var(--blue-dp);background:rgba(83,97,75,.12);}
+.svc-cat.profundo{color:#7c5c2b;background:rgba(244,189,56,.18);}
+
+.svc-name{display:-webkit-box;min-height:86px;overflow:hidden;font-family:'Playfair Display',serif;font-size:23px;font-weight:400;color:var(--pink-dp);line-height:1.25;margin-bottom:12px;-webkit-line-clamp:3;-webkit-box-orient:vertical;}
+.svc-tagline{display:flex;align-items:flex-end;min-height:34px;font-size:10px;line-height:1.35;letter-spacing:1.1px;text-transform:uppercase;font-weight:800;color:var(--gold);margin-bottom:8px;}
+.svc-tagline.blank{visibility:hidden;}
+
+.includes-label{margin-bottom:8px;color:#9a838e;font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;}
+.svc-includes{display:flex;align-content:flex-start;flex-wrap:wrap;gap:7px;min-height:72px;margin-bottom:18px;}
+.inc{
+  font-size:11.5px;font-weight:700;color:#5f4e57;
+  padding:6px 11px;border-radius:999px;
+  background:rgba(255,255,255,.8);border:1px solid rgba(186,138,80,.16);
+}
+.inc.more{background:transparent;border-style:dashed;color:#9a838e;}
+
+.svc-price{
+  min-height:100px;margin-top:auto;padding-top:20px;border-top:1px solid rgba(177,95,125,.14);
+}
+.price-main{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;}
+.price-value{font-family:'Playfair Display',serif;font-size:38px;line-height:1;color:var(--blue);}
+.price-value.consulta{font-size:26px;color:var(--muted);font-style:italic;}
+.price-caption{font-size:12px;color:#8a7680;font-weight:700;}
+.price-alt{font-size:12px;color:#9a838e;line-height:1.7;margin-top:8px;}
+.price-alt b{color:#6f5e66;font-weight:700;}
+
+.svc-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px;}
+.btn-detail{
+  font-family:'Nunito',sans-serif;font-size:13.5px;font-weight:800;cursor:pointer;
+  padding:14px 16px;border-radius:16px;
+  color:#5f4e57;background:rgba(255,255,255,.8);
+  border:1px solid rgba(177,95,125,.18);
+  transition:all .22s ease;
+}
+.btn-detail:hover{border-color:rgba(177,95,125,.36);color:var(--pink-dp);transform:translateY(-2px);box-shadow:var(--shadow-sm);}
+.svc-wpp{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  background:linear-gradient(135deg,#22c35e,#27d367);color:#fff;
+  font-family:'Nunito',sans-serif;font-size:13.5px;font-weight:800;
+  padding:14px 20px;border-radius:16px;text-decoration:none;
+  box-shadow:0 12px 24px rgba(37,211,102,.2);
+  transition:transform .24s ease, box-shadow .24s ease;white-space:nowrap;
+}
+.svc-wpp:hover{transform:translateY(-2px);box-shadow:0 16px 30px rgba(37,211,102,.3);}
+.svc-wpp svg{width:17px;height:17px;fill:#fff;flex-shrink:0;}
+
+.empty{
+  text-align:center;padding:60px 20px;
+  font-size:15px;color:var(--muted);font-style:italic;
+  font-family:'Playfair Display',serif;
+}
+
+/* GALERIA DE RESULTADOS */
+.gallery-section{padding:84px 0 72px;text-align:center;overflow:hidden;background:linear-gradient(180deg, rgba(247,237,241,.5), rgba(255,250,245,.92));}
+.gallery-head{max-width:820px;margin:0 auto;padding:0 24px;}
+.gallery-wrap{position:relative;max-width:1320px;margin:0 auto;padding:22px 0 0;}
+.gallery{
+  display:flex;gap:18px;overflow-x:auto;padding:10px 34px 28px;
+  scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;
+}
+.gallery::-webkit-scrollbar{display:none;}
+.gcard{
+  position:relative;flex:0 0 300px;height:430px;border-radius:26px;overflow:hidden;
+  scroll-snap-align:center;cursor:zoom-in;
+  border:1px solid rgba(177,95,125,.16);background:var(--pink-lt);
+  box-shadow:var(--shadow-md);
+  transition:transform .28s ease, box-shadow .28s ease;
+}
+.gcard.wide{flex-basis:430px;} /* antes & depois, quase quadradas */
+.gcard:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);}
+.gcard img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease;}
+.gcard:hover img{transform:scale(1.045);}
+.gcard::after{content:'';position:absolute;inset:auto 0 0 0;height:44%;background:linear-gradient(180deg, rgba(47,36,48,0), rgba(47,36,48,.55));pointer-events:none;}
+.gcard-caption{position:absolute;left:18px;right:18px;bottom:15px;z-index:2;text-align:left;color:#fff;font-size:13.5px;font-weight:700;letter-spacing:.2px;text-shadow:0 2px 10px rgba(47,36,48,.45);}
+.gbadge{
+  position:absolute;top:14px;left:14px;z-index:2;
+  font-size:9.5px;letter-spacing:1.6px;text-transform:uppercase;font-weight:800;color:#5a3043;
+  background:rgba(255,250,245,.94);padding:8px 13px;border-radius:999px;
+  box-shadow:0 8px 18px rgba(47,36,48,.18);
+}
+.gcard-cta{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;
+  background:linear-gradient(160deg,#fbf0f3 0%,#f8f0de 55%,#f4eadf 100%);
+  text-decoration:none;cursor:pointer;padding:26px;
+}
+.gcard-cta::after{display:none;}
+.gcard-cta strong{font-family:'Playfair Display',serif;font-weight:400;font-size:24px;color:var(--pink-dp);line-height:1.25;max-width:11ch;}
+.gcard-cta span{font-size:12.5px;color:#8a7680;font-weight:700;}
+.gcard-cta .gcta-pill{
+  margin-top:12px;display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;font-weight:800;color:#fff;padding:13px 22px;border-radius:999px;
+  background:linear-gradient(135deg, #833ab4, #fd1d1d 60%, #fcb045);
+  box-shadow:0 14px 28px rgba(131,58,180,.28);transition:transform .24s ease;
+}
+.gcard-cta:hover .gcta-pill{transform:translateY(-2px);}
+.gnav{
+  position:absolute;top:50%;transform:translateY(-50%);z-index:5;
+  width:46px;height:46px;border-radius:50%;cursor:pointer;
+  border:1px solid rgba(177,95,125,.22);background:rgba(255,252,249,.95);color:var(--pink-dp);
+  font-size:22px;line-height:1;display:flex;align-items:center;justify-content:center;
+  box-shadow:var(--shadow-md);transition:transform .22s ease, box-shadow .22s ease;
+}
+.gnav:hover{transform:translateY(-50%) scale(1.06);box-shadow:var(--shadow-lg);}
+.gnav.prev{left:12px;}
+.gnav.next{right:12px;}
+
+/* LIGHTBOX da galeria */
+.lb{
+  position:fixed;inset:0;z-index:120;
+  display:none;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:22px;
+  background:rgba(47,36,48,.74);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+}
+.lb.open{display:flex;animation:fade .2s ease both;}
+.lb img{max-width:min(92vw,720px);max-height:80vh;border-radius:22px;box-shadow:0 30px 80px rgba(0,0,0,.45);display:block;}
+.lb-caption{color:#fff;font-size:14px;font-weight:700;text-shadow:0 2px 8px rgba(0,0,0,.4);}
+.lb-close{
+  position:absolute;top:20px;right:20px;
+  width:42px;height:42px;border-radius:50%;cursor:pointer;border:none;
+  background:rgba(255,255,255,.92);color:#5a3043;font-size:20px;line-height:1;
+  display:flex;align-items:center;justify-content:center;transition:transform .22s ease;
+}
+.lb-close:hover{transform:rotate(90deg);}
+.lb .gnav{background:rgba(255,255,255,.92);}
+
+/* BIO */
+.bio{background:linear-gradient(180deg, rgba(247,237,241,.86), rgba(255,250,245,.95)),var(--pink-lt);padding:84px 24px;text-align:center;}
+.bio-inner{max-width:760px;margin:0 auto;background:rgba(255,250,245,.76);border:1px solid rgba(255,255,255,.82);border-radius:32px;padding:42px 34px;box-shadow:0 18px 50px rgba(74,34,50,.10);}
+.bio-text{font-size:18px;color:#5a4550;line-height:1.95;font-style:italic;font-family:'Playfair Display',serif;}
+
+/* AUDIENCE */
+.audience,.process,.faq-section,.horarios{padding:84px 24px;text-align:center;}
+.audience-grid{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;}
+.audience-card,.faq-card{background:rgba(255,255,255,.88);border:1px solid rgba(177,95,125,.14);border-radius:24px;padding:28px 24px;text-align:left;box-shadow:0 12px 32px rgba(74,34,50,.08);}
+.audience-card h3,.process-card h3,.faq-card h3{font-family:'Playfair Display',serif;font-size:22px;font-weight:400;color:#6b2947;margin-bottom:12px;}
+.audience-card p,.process-card p,.faq-card p{font-size:14px;color:#6f5e66;line-height:1.8;}
+
+/* DIFFERENTIALS */
+.differentials,.stats-section,.contact-section{background:radial-gradient(circle at top right, rgba(186,138,80,.10), transparent 20%),linear-gradient(180deg,#f7f1e6 0%,#f2eadf 100%);padding:84px 24px;text-align:center;}
+.differentials-grid{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+.differential-card{background:linear-gradient(180deg, rgba(255,255,255,.86), rgba(255,248,239,.92));border:1px solid rgba(83,97,75,.18);border-radius:26px;padding:28px 24px;text-align:left;box-shadow:0 12px 32px rgba(74,34,50,.08);}
+.differential-card strong{display:block;font-size:16px;color:#334031;margin-bottom:10px;}
+.differential-card p{font-size:14px;color:#667260;line-height:1.8;}
+
+/* PROCESS */
+.process-grid{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;}
+.process-card{background:linear-gradient(180deg, rgba(255,250,245,.98), rgba(247,237,241,.92));border:1px solid rgba(177,95,125,.14);border-radius:26px;padding:28px 22px;text-align:left;position:relative;box-shadow:0 12px 32px rgba(74,34,50,.08);}
+.process-step{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--pink),#6b2947);color:#fff;font-size:14px;font-weight:800;margin-bottom:16px;box-shadow:0 10px 20px rgba(107,41,71,.22);}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;max-width:920px;margin:0 auto;}
+.stat{background:rgba(255,250,245,.78);border:1px solid rgba(83,97,75,.14);border-radius:24px;padding:30px 22px;box-shadow:0 12px 32px rgba(74,34,50,.08);}
+.stat-num{font-family:'Playfair Display',serif;font-size:52px;color:var(--blue);line-height:1;}
+.stat-label{font-size:13px;color:#6b6c5f;margin-top:10px;line-height:1.7;}
+
+/* HORARIOS */
+.horario-grid{display:flex;flex-direction:column;gap:10px;max-width:420px;margin:0 auto;}
+.horario-row{display:flex;justify-content:space-between;align-items:center;padding:15px 20px;border-radius:18px;background:rgba(255,250,245,.9);border:1px solid rgba(177,95,125,.14);font-size:15px;box-shadow:0 12px 32px rgba(74,34,50,.08);}
+.horario-day{color:#5a3043;font-weight:800;}
+.horario-time{color:var(--muted);}
+
+/* REVIEWS */
+.reviews-section{background:linear-gradient(180deg, rgba(247,237,241,.88), rgba(255,249,244,.98)),var(--pink-lt);padding:84px 24px;text-align:center;}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;max-width:980px;margin:0 auto 34px;}
+.review-card{background:linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,248,243,.92));border:1px solid rgba(177,95,125,.14);border-radius:24px;padding:28px 22px;text-align:left;box-shadow:0 12px 32px rgba(74,34,50,.08);}
+.review-stars{color:#e0a93c;font-size:15px;margin-bottom:12px;letter-spacing:2px;}
+.review-text{font-size:14px;color:#4f3d46;line-height:1.85;margin-bottom:16px;font-style:italic;}
+.review-author{font-size:12px;color:#7d6a73;letter-spacing:.8px;font-weight:800;}
+.review-meta{display:block;font-size:11px;color:#9a838e;margin-top:5px;letter-spacing:.4px;}
+.review-total{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.9);border:1px solid rgba(177,95,125,.14);border-radius:999px;padding:14px 24px;font-size:14px;color:#715f68;box-shadow:0 12px 32px rgba(74,34,50,.08);}
+.review-total strong{color:#6b2947;font-size:16px;}
+
+/* FAQ */
+.faq-grid{max-width:980px;margin:0 auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+
+/* CONTACT */
+.contact-section{overflow:hidden;}
+.contact-card{background:linear-gradient(180deg, rgba(255,255,255,.88), rgba(255,250,245,.94));border-radius:32px;padding:42px 30px;max-width:560px;margin:0 auto;border:1px solid rgba(255,255,255,.82);box-shadow:0 18px 50px rgba(74,34,50,.10);}
+.contact-callout{display:inline-block;margin-bottom:16px;padding:10px 14px;border-radius:999px;background:rgba(244,189,56,.14);border:1px solid rgba(186,138,80,.18);font-size:12px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:#7c5c2b;}
+.contact-card>p{font-size:15px;color:#665860;margin-bottom:32px;line-height:1.8;}
+.info-list{display:flex;flex-direction:column;gap:16px;margin-bottom:32px;text-align:left;}
+.info-row{display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid rgba(83,97,75,.12);}
+.info-row:last-child{border-bottom:none;padding-bottom:0;}
+.info-icon{width:42px;height:42px;border-radius:16px;background:linear-gradient(135deg, rgba(83,97,75,.12), rgba(186,138,80,.16));display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid rgba(83,97,75,.14);}
+.info-icon svg{width:14px;height:14px;stroke:var(--blue);fill:none;stroke-width:1.5;}
+.info-text{font-size:14px;color:#394538;line-height:1.7;padding-top:2px;}
+.info-text strong{display:block;font-size:11px;color:#7b7065;margin-bottom:2px;letter-spacing:.8px;text-transform:uppercase;}
+.btn-wpp-lg{display:flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,#22c35e,#27d367);color:#fff;font-family:'Nunito',sans-serif;font-size:16px;font-weight:800;padding:17px 22px;border-radius:999px;text-decoration:none;width:100%;transition:transform .24s ease, box-shadow .24s ease, opacity .24s ease;box-shadow:0 18px 34px rgba(37,211,102,.22);}
+.btn-wpp-lg:hover{opacity:1;transform:translateY(-2px);box-shadow:0 20px 38px rgba(37,211,102,.28);}
+.btn-wpp-lg svg{width:22px;height:22px;fill:#fff;}
+.action-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px;}
+.action-link{display:flex;align-items:center;justify-content:center;text-align:center;padding:14px 16px;border-radius:18px;text-decoration:none;font-size:14px;font-weight:800;color:#5f4e57;background:rgba(255,255,255,.74);border:1px solid rgba(177,95,125,.14);box-shadow:0 12px 28px rgba(74,34,50,.06);transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;}
+.action-link:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(74,34,50,.09);border-color:rgba(177,95,125,.24);}
+.action-link.instagram{background:linear-gradient(135deg, rgba(131,58,180,.08), rgba(253,29,29,.08), rgba(252,176,69,.12));}
+.action-link.google{background:linear-gradient(135deg, rgba(66,133,244,.08), rgba(52,168,83,.08));}
+.action-link.route{background:linear-gradient(135deg, rgba(244,189,56,.12), rgba(186,138,80,.10));}
+
+/* FOOTER */
+footer{padding:30px 24px 40px;text-align:center;background:transparent;}
+footer p{font-size:12px;color:#a08f98;letter-spacing:.4px;line-height:1.8;}
+footer span{color:#6b2947;}
+.mobile-cta{display:none;}
+
+/* MODAL */
+.modal-backdrop{
+  position:fixed;inset:0;z-index:100;
+  display:none;align-items:center;justify-content:center;padding:24px;
+  background:rgba(47,36,48,.5);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+}
+.modal-backdrop.open{display:flex;animation:fade .2s ease both;}
+@keyframes fade{from{opacity:0;}to{opacity:1;}}
+.modal{
+  position:relative;width:100%;max-width:640px;max-height:88vh;overflow-y:auto;
+  background:linear-gradient(180deg,#fffdfb,#fff7f2);
+  border:1px solid rgba(255,255,255,.9);border-radius:30px;
+  padding:40px 36px 34px;
+  box-shadow:0 30px 70px rgba(47,36,48,.28);
+  animation:pop .26s cubic-bezier(.2,.9,.3,1) both;
+}
+@keyframes pop{from{opacity:0;transform:translateY(18px) scale(.98);}to{opacity:1;transform:none;}}
+.modal-close{
+  position:absolute;top:18px;right:18px;
+  width:38px;height:38px;border-radius:50%;cursor:pointer;
+  border:1px solid rgba(177,95,125,.18);background:rgba(255,255,255,.9);
+  color:#7c6c74;font-size:19px;line-height:1;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .22s ease;
+}
+.modal-close:hover{background:var(--pink-lt);color:var(--pink-dp);transform:rotate(90deg);}
+.modal-head{display:flex;align-items:center;gap:16px;margin-bottom:20px;padding-right:44px;}
+.modal-head .svc-icon{width:60px;height:60px;font-size:30px;}
+.modal h2{font-family:'Playfair Display',serif;font-size:clamp(24px,3.2vw,32px);font-weight:400;color:var(--pink-dp);line-height:1.2;margin-bottom:0;}
+.modal-tagline{font-size:11px;letter-spacing:1.4px;text-transform:uppercase;font-weight:800;color:var(--gold);margin-bottom:6px;}
+.modal-desc{font-size:15.5px;color:#55434c;line-height:1.9;margin-bottom:28px;}
+.modal-block{margin-bottom:26px;}
+.modal-block-title{font-size:10px;letter-spacing:2.4px;text-transform:uppercase;color:var(--pink);font-weight:800;margin-bottom:14px;}
+.modal-list{list-style:none;display:flex;flex-direction:column;gap:11px;}
+.modal-list li{
+  display:flex;align-items:flex-start;gap:11px;
+  font-size:14.5px;color:#55434c;line-height:1.65;
+}
+.modal-list li::before{
+  content:'';flex-shrink:0;margin-top:7px;
+  width:7px;height:7px;border-radius:50%;
+  background:linear-gradient(135deg,var(--gold),var(--pink));
+}
+.modal-prices{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;
+}
+.pcard{
+  padding:18px 16px;border-radius:20px;text-align:center;
+  background:rgba(255,255,255,.86);border:1px solid rgba(83,97,75,.14);
+  box-shadow:var(--shadow-sm);
+}
+.pcard.hi{border-color:rgba(83,97,75,.34);background:linear-gradient(180deg, rgba(244,236,223,.9), rgba(255,252,247,.95));}
+.pcard-label{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8a7680;font-weight:800;margin-bottom:8px;}
+.pcard-value{font-family:'Playfair Display',serif;font-size:28px;color:var(--blue);line-height:1;}
+.pcard-note{font-size:11px;color:#9a838e;margin-top:6px;}
+.modal .btn-wpp{width:100%;justify-content:center;padding:17px 22px;font-size:15px;}
+.modal-foot-note{font-size:12px;color:#9a838e;text-align:center;margin-top:14px;line-height:1.7;}
+
+/* REVEAL AO ROLAR — só esconde se o JS estiver rodando (classe .js no <html>);
+   sem JS, tudo fica visível normalmente */
+.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease;}
+.js .reveal.in{opacity:1;transform:none;}
+@media(prefers-reduced-motion:reduce){
+  .svc,.category-section{animation:none;}
+  .svc:hover{transform:none;}
+  .js .reveal{opacity:1;transform:none;transition:none;}
+  .petals{display:none;}
+  .hero-quote,.js .hero-quote{animation:none;}
+  .js .hero-text>*,.js .hero-photo-side img{animation:none;}
+}
+
+/* MOBILE */
+@media(max-width:1080px) and (min-width:921px){
+  .catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media(max-width:920px){
+  .topbar{padding:12px 18px;}
+  .topbar-link{display:none;}
+  .hero{flex-direction:column;min-height:auto;padding:24px 16px 20px;}
+  .hero-content{max-width:100%;padding:24px 8px 12px;}
+  .hero-photo-side{flex:none;width:100%;min-height:390px;}
+  .hero-photo-side img{max-height:480px;}
+  .highlights-grid,.audience-grid,.differentials-grid,.process-grid,.faq-grid,.stats{grid-template-columns:1fr;}
+  /* Sticky duplo comia a tela no celular: aqui os controles rolam junto */
+  .controls{position:static;padding:14px 0 16px;}
+  /* nowrap: com wrap herdado da base, a "linha" da coluna estica até o item
+     mais largo e o trilho de chips vaza da tela */
+  .controls-inner{flex-direction:column;flex-wrap:nowrap;align-items:stretch;gap:10px;}
+  .control-label{display:none;}
+  .control-block{justify-content:flex-start;min-width:0;max-width:100%;}
+  /* Categorias em uma linha só, com rolagem lateral dentro do próprio trilho */
+  .chips{
+    flex-wrap:nowrap;overflow-x:auto;min-width:0;
+    padding:2px 18px;scrollbar-width:none;-webkit-overflow-scrolling:touch;
+  }
+  .chips::-webkit-scrollbar{display:none;}
+  .chip{flex:0 0 auto;}
+  .control-block:last-child{padding:0 18px;}
+  .catalog-summary{padding:0 18px;flex-direction:column;align-items:flex-start;gap:6px;}
+  .catalog-body{padding:30px 18px 0;}
+  .catalog-grid{grid-template-columns:1fr;gap:18px;}
+  .category-heading{flex-direction:column;align-items:flex-start;gap:8px;}
+  .category-heading p{text-align:left;}
+  .gallery{padding:10px 18px 24px;gap:14px;}
+  .gallery-wrap .gnav{display:none;} /* no toque, o arraste é a navegação; o lightbox mantém as setas */
+}
+@media(max-width:680px){
+  .topbar-brand{font-size:17px;}
+  .topbar-cta span{display:none;}
+  .topbar-cta{padding:11px 13px;}
+  .hero h1{font-size:clamp(36px,12vw,52px);}
+  .hero-sub{font-size:12px;}
+  .hero-lead{font-size:15px;}
+  .hero-photo-side{min-height:320px;}
+  .hero-photo-side img{max-height:380px;width:100%;object-position:top;}
+  .hero-cta-row{flex-direction:column;align-items:stretch;}
+  .hero-cta-row .btn-wpp{justify-content:center;}
+  .ask-chip{font-size:12.5px;padding:6px 10px;}
+  .hero-quote{left:10px;bottom:14px;max-width:215px;padding:12px 14px;}
+  .hero-quote p{font-size:13px;}
+  .highlights,.bio,.audience,.differentials,.process,.stats-section,.horarios,.reviews-section,.faq-section,.contact-section{padding-left:18px;padding-right:18px;}
+  .bio,.audience,.differentials,.process,.stats-section,.horarios,.reviews-section,.faq-section,.contact-section{padding-top:68px;padding-bottom:68px;}
+  .catalog-section{padding-top:68px;padding-bottom:48px;}
+  .svc{padding:24px 20px 20px;min-height:auto;}
+  .svc-name,.svc-fit,.svc-includes,.svc-price{min-height:auto;}
+  .svc-actions{grid-template-columns:1fr;}
+  .category-heading h2{font-size:27px;}
+  .modal{padding:32px 22px 26px;border-radius:24px;}
+  .modal-head{gap:12px;}
+  .pay-switch{width:100%;}
+  .pay-btn{flex:1;padding:9px 8px;font-size:11.5px;}
+  .chip{padding:10px 14px;font-size:12.5px;}
+  .gallery-section{padding:68px 0 56px;}
+  .gcard{flex-basis:246px;height:368px;border-radius:22px;}
+  .gcard.wide{flex-basis:330px;}
+  .gcard-caption{left:14px;right:14px;bottom:12px;font-size:12.5px;}
+  .gcard-cta strong{font-size:20px;}
+  .lb .gnav{display:flex;width:40px;height:40px;position:fixed;}
+  .lb .gnav.prev{left:8px;}
+  .lb .gnav.next{right:8px;}
+  .horario-row{font-size:14px;padding:14px 16px;}
+  .review-total{padding:14px 18px;}
+  .contact-card{padding:30px 22px;}
+  .reviews-grid{grid-template-columns:1fr;}
+  .action-grid{grid-template-columns:1fr;}
+  body{padding-bottom:74px;}
+  .mobile-cta{
+    position:fixed;z-index:80;right:14px;bottom:12px;left:14px;
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+    padding:11px 12px 11px 18px;border-radius:20px;
+    background:rgba(107,41,71,.95);color:#fff;text-decoration:none;
+    box-shadow:0 18px 42px rgba(74,34,50,.28);
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  }
+  .mobile-cta span{font-size:11px;font-weight:800;line-height:1.3;}
+  .mobile-cta b{display:inline-flex;padding:9px 13px;border-radius:12px;background:#25d366;font-size:11px;}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <a class="topbar-brand" href="#">
+    Isabella Marques
+    <small>Especialista em cachos</small>
+  </a>
+  <nav class="topbar-nav">
+    <a class="topbar-link" href="#servicos">Serviços e valores</a>
+    <a class="topbar-link" href="#resultados">Resultados</a>
+    <a class="topbar-link" href="#processo">Como funciona</a>
+    <a class="topbar-link" href="#avaliacoes">Avaliações</a>
+    <a class="topbar-link" href="#contato">Contato</a>
+    <a class="topbar-cta" href="https://wa.me/5538999117983?text=Ol%C3%A1%20Isabella!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.553 4.112 1.523 5.838L.057 23.804a.5.5 0 0 0 .614.63l6.101-1.598A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.686-.513-5.218-1.406l-.374-.22-3.878 1.016 1.034-3.772-.242-.388A9.945 9.945 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+      <span>Agendar</span>
+    </a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="petals" aria-hidden="true">
+    <span class="petal"></span><span class="petal"></span><span class="petal"></span>
+    <span class="petal"></span><span class="petal"></span><span class="petal"></span>
+    <span class="petal"></span><span class="petal"></span><span class="petal"></span>
+  </div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-badge">Isabella Marques | Especialista em cachos</div>
+      <h1>Cachos bonitos, definidos<br><em>e com cara de você</em></h1>
+      <p class="hero-sub">Salão de beleza especializado em cachos em Unaí, Minas Gerais</p>
+      <p class="hero-lead">Corte, tratamento e finalização pensados para valorizar a sua curvatura com mais definição, saúde e leveza, sem tirar a identidade natural dos seus fios.</p>
+      <div class="stars-row">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="stars-label">5,0 no Google com 278 avaliações</span>
+      </div>
+      <div class="hero-ask" id="heroAsk">
+        <span class="hero-ask-label">Como está seu cabelo hoje?</span>
+        <div class="ask-chips">
+          <button class="ask-chip" type="button" aria-pressed="false" data-msg="Meu cabelo está sem definição e sem forma">Sem definição</button>
+          <button class="ask-chip" type="button" aria-pressed="false" data-msg="Meus fios estão ressecados e sem brilho">Ressecado</button>
+          <button class="ask-chip" type="button" aria-pressed="false" data-msg="Estou em transição capilar">Em transição</button>
+          <button class="ask-chip" type="button" aria-pressed="false" data-msg="Quero mudar o visual">Quero mudar o visual</button>
+        </div>
+      </div>
+      <div class="hero-cta-row">
+        <a class="btn-wpp" id="heroWpp" href="https://wa.me/5538999117983?text=Ol%C3%A1%20Isabella!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.553 4.112 1.523 5.838L.057 23.804a.5.5 0 0 0 .614.63l6.101-1.598A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.686-.513-5.218-1.406l-.374-.22-3.878 1.016 1.034-3.772-.242-.388A9.945 9.945 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          <span class="btn-wpp-label">Quero conversar sobre meu cabelo</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-photo-side">
+    <picture>
+      <source srcset="hero-isabella.webp" type="image/webp"/>
+      <img src="hero-fallback.png" alt="Isabella Marques" width="800" height="1200" fetchpriority="high"/>
+    </picture>
+    <div class="hero-quote">
+      <span class="hero-quote-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <p>"Cheguei querendo mais definição e saí me sentindo muito mais bonita."</p>
+      <span class="hero-quote-author">Amanda R. · avaliação no Google</span>
+    </div>
+  </div>
+</section>
+
+<section class="highlights">
+  <div class="highlights-grid">
+    <div class="highlight-item reveal">
+      <strong>Curvatura tratada com intenção</strong>
+      <span>O foco é valorizar a textura natural do seu cabelo, sem descaracterizar seus fios.</span>
+    </div>
+    <div class="highlight-item reveal">
+      <strong>Especialização que aparece no resultado</strong>
+      <span>Cada etapa é pensada para cachos, crespos e ondulados com técnica e intenção.</span>
+    </div>
+    <div class="highlight-item reveal">
+      <strong>Resultado também fora do salão</strong>
+      <span>Mais definição, saúde e caimento bonito com orientações que fazem sentido na sua rotina.</span>
+    </div>
+  </div>
+</section>
+
+<!-- CATÁLOGO DE SERVIÇOS -->
+<section class="catalog-section" id="servicos">
+  <div class="catalog-head">
+    <div class="sec-tag">Catálogo de serviços</div>
+    <h2 class="h2-pink">Serviços pensados para a realidade do seu cacho</h2>
+    <div class="divider divider-pink"></div>
+    <p class="catalog-lead">Compare valores, veja o que cada atendimento inclui e escolha como pagar. Quando decidir, o agendamento é direto pelo WhatsApp.</p>
+    <div class="catalog-note">Todos os atendimentos incluem avaliação capilar e consultoria personalizada</div>
+  </div>
+
+  <div class="controls">
+    <div class="catalog-summary">
+      <p><strong id="resultsSummary">6 atendimentos disponíveis</strong></p>
+      <div class="summary-trust"><span>Avaliação inclusa</span><span>Consultoria personalizada</span></div>
+    </div>
+    <div class="controls-inner">
+      <div class="control-block">
+        <span class="control-label">Categoria</span>
+        <div class="chips" id="chips" role="group" aria-label="Filtrar por categoria"></div>
+      </div>
+      <div class="control-block">
+        <span class="control-label">Forma de pagamento</span>
+        <div class="pay-switch" role="group" aria-label="Escolher forma de pagamento">
+          <button class="pay-btn" type="button" data-pay="pix" aria-pressed="true">À vista</button>
+          <button class="pay-btn" type="button" data-pay="cartao" aria-pressed="false">Cartão</button>
+          <button class="pay-btn" type="button" data-pay="parcelado" aria-pressed="false">Parcelado</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="catalog-body">
+    <div class="catalog-inner" id="grid"></div>
+  </div>
+</section>
+
+<!-- RESULTADOS -->
+<section class="gallery-section" id="resultados">
+  <div class="gallery-head">
+    <div class="sec-tag sec-tag-gold">Resultados de verdade</div>
+    <h2 class="h2-pink">Transformações feitas aqui, em cabelos reais</h2>
+    <div class="divider divider-gold"></div>
+    <p class="catalog-lead">Arraste para o lado e veja o que a técnica certa faz por cada curvatura. Toque em uma foto para ampliar.</p>
+  </div>
+  <div class="gallery-wrap">
+    <button class="gnav prev" type="button" id="gPrev" aria-label="Fotos anteriores">&#8249;</button>
+    <div class="gallery" id="gallery" aria-label="Galeria de resultados"></div>
+    <button class="gnav next" type="button" id="gNext" aria-label="Próximas fotos">&#8250;</button>
+  </div>
+</section>
+
+<!-- BIO -->
+<section class="bio">
+  <div class="bio-inner reveal">
+    <div class="sec-tag">Sobre o atendimento</div>
+    <h2 class="h2-pink">Cuidado especializado para valorizar a sua curvatura</h2>
+    <div class="divider divider-pink"></div>
+    <p class="bio-text">"Meu trabalho é cuidar dos seus fios com técnica, sensibilidade e respeito à sua curvatura. Cada atendimento é pensado para valorizar a textura natural do seu cabelo, melhorar definição, leveza e saúde dos fios, sem descaracterizar quem você é. Aqui, seu cabelo natural é tratado como beleza, identidade e potência."</p>
+  </div>
+</section>
+
+<section class="audience">
+  <div class="sec-tag">Para quem esse atendimento faz sentido</div>
+  <h2 class="h2-pink">Se você quer se sentir mais segura com o seu cabelo natural, você está no lugar certo</h2>
+  <div class="divider divider-pink"></div>
+  <div class="audience-grid">
+    <div class="audience-card reveal">
+      <h3>Seu cabelo perdeu forma</h3>
+      <p>Se os fios estão sem definição, sem caimento ou com volume desorganizado, o atendimento busca recuperar leitura, beleza e leveza da sua curvatura.</p>
+    </div>
+    <div class="audience-card reveal">
+      <h3>Você quer tratar melhor os fios</h3>
+      <p>Quando o cabelo pede mais hidratação, nutrição e orientação, a proposta é cuidar com técnica e indicar o que realmente faz sentido para você.</p>
+    </div>
+    <div class="audience-card reveal">
+      <h3>Você quer resultado com identidade</h3>
+      <p>A ideia não é padronizar o seu cabelo, e sim valorizar o que ele tem de mais bonito de forma coerente com seu estilo e sua rotina.</p>
+    </div>
+  </div>
+</section>
+
+<section class="differentials">
+  <div class="sec-tag sec-tag-blue">Por que tantas clientes confiam</div>
+  <h2 class="h2-blue">Diferenciais que deixam o atendimento mais seguro e mais personalizado</h2>
+  <div class="divider divider-blue"></div>
+  <div class="differentials-grid">
+    <div class="differential-card reveal">
+      <strong>Olhar treinado para cabelos com curvatura</strong>
+      <p>O atendimento considera forma, densidade, comportamento do fio e o que valoriza de verdade o seu cabelo.</p>
+    </div>
+    <div class="differential-card reveal">
+      <strong>Resultado bonito e funcional</strong>
+      <p>O objetivo é entregar um cabelo que você admire no espelho e consiga manter com mais consciência no dia a dia.</p>
+    </div>
+    <div class="differential-card reveal">
+      <strong>Escuta antes de qualquer decisão</strong>
+      <p>Cada escolha parte do seu objetivo, da condição atual dos fios e do tipo de resultado que faz sentido para você.</p>
+    </div>
+    <div class="differential-card reveal">
+      <strong>Técnica, cuidado e consistência</strong>
+      <p>É isso que sustenta as avaliações, as indicações entre clientes e a confiança construída ao longo dos anos.</p>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="processo">
+  <div class="sec-tag">Como funciona</div>
+  <h2 class="h2-pink">Uma experiência pensada para você chegar com dúvida e sair com clareza e resultado</h2>
+  <div class="divider divider-pink"></div>
+  <div class="process-grid">
+    <div class="process-card reveal">
+      <div class="process-step">1</div>
+      <h3>Escuta</h3>
+      <p>A Isabella entende seu momento, sua rotina e o que você espera do seu cabelo.</p>
+    </div>
+    <div class="process-card reveal">
+      <div class="process-step">2</div>
+      <h3>Análise</h3>
+      <p>Os fios são avaliados para identificar o que mais valoriza sua curvatura e o que ela precisa agora.</p>
+    </div>
+    <div class="process-card reveal">
+      <div class="process-step">3</div>
+      <h3>Execução</h3>
+      <p>O procedimento é realizado com foco em definição, saúde, caimento e harmonia com seu estilo.</p>
+    </div>
+    <div class="process-card reveal">
+      <div class="process-step">4</div>
+      <h3>Orientação</h3>
+      <p>Você sai entendendo melhor seu cabelo e com mais direção para manter o resultado fora do salão.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section">
+  <div class="sec-tag sec-tag-blue">Confiança construída no atendimento</div>
+  <h2 class="h2-blue">Resultados que mostram consistência</h2>
+  <div class="divider divider-blue"></div>
+  <div class="stats">
+    <div class="stat reveal"><div class="stat-num" data-count="5" data-prefix="+">+5</div><div class="stat-label">Anos dedicados ao cuidado com curvatura</div></div>
+    <div class="stat reveal"><div class="stat-num" data-count="278">278</div><div class="stat-label">Avaliações no Google com nota 5,0</div></div>
+    <div class="stat reveal"><div class="stat-num" data-count="100" data-suffix="%">100%</div><div class="stat-label">Atendimento voltado para cabelos com curvatura</div></div>
+  </div>
+</section>
+
+<!-- HORÁRIOS -->
+<section class="horarios" id="horarios">
+  <div class="sec-tag">Funcionamento</div>
+  <h2 class="h2-pink">Horários de atendimento</h2>
+  <div class="divider divider-pink"></div>
+  <div class="horario-grid">
+    <div class="horario-row reveal"><span class="horario-day">Segunda a Sexta</span><span class="horario-time">13h às 18h</span></div>
+    <div class="horario-row reveal"><span class="horario-day">Sábado</span><span class="horario-time">08h às 16h</span></div>
+    <div class="horario-row reveal" style="opacity:.6;"><span class="horario-day">Domingo</span><span class="horario-time">Fechado</span></div>
+  </div>
+</section>
+
+<!-- AVALIAÇÕES -->
+<section class="reviews-section" id="avaliacoes">
+  <div class="sec-tag">Prova social que gera confiança</div>
+  <h2 class="h2-pink">Clientes que saíram se sentindo mais bonitas, seguras e satisfeitas com o próprio cabelo</h2>
+  <p style="font-size:13px;color:var(--muted);margin-bottom:36px;">Depoimentos publicados por clientes no Google e percebidos no dia a dia do atendimento</p>
+  <div class="reviews-grid">
+    <div class="review-card reveal">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">"Cheguei querendo mais definição e saí me sentindo muito mais bonita. A Isabella entendeu meu cabelo, acertou no corte e o resultado ficou leve, bonito e com muito mais vida."</p>
+      <div class="review-author">Amanda R. <span class="review-meta">cacheada | corte e definição</span></div>
+    </div>
+    <div class="review-card reveal">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">"Foi um atendimento acolhedor e muito técnico. Ela explicou o que meu cabelo precisava, cuidou de cada detalhe e eu senti diferença no brilho, no caimento e na segurança para finalizar em casa."</p>
+      <div class="review-author">Fernanda L. <span class="review-meta">ondulada | tratamento e orientação</span></div>
+    </div>
+    <div class="review-card reveal">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">"Não foi só um serviço de salão. Eu saí entendendo melhor meu cabelo e com um resultado que realmente combinou comigo. Atendimento delicado, bonito e muito profissional."</p>
+      <div class="review-author">Juliana M. <span class="review-meta">crespa | hidratação e corte</span></div>
+    </div>
+  </div>
+  <div class="review-total">
+    <span style="color:#f5c518;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+    <span><strong>278</strong> avaliações com nota 5,0 no Google</span>
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="sec-tag">Dúvidas comuns antes de agendar</div>
+  <h2 class="h2-pink">O que muitas clientes querem saber antes do primeiro atendimento</h2>
+  <div class="divider divider-pink"></div>
+  <div class="faq-grid">
+    <div class="faq-card reveal">
+      <h3>Atende só cabelos cacheados?</h3>
+      <p>O atendimento é voltado para cabelos ondulados, cacheados e crespos, sempre respeitando a curvatura natural dos fios.</p>
+    </div>
+    <div class="faq-card reveal">
+      <h3>Quem está em transição pode agendar?</h3>
+      <p>Sim. O cuidado considera o momento atual do seu cabelo para ajudar você a atravessar essa fase com mais segurança e autoestima.</p>
+    </div>
+    <div class="faq-card reveal">
+      <h3>Preciso saber exatamente qual serviço fazer?</h3>
+      <p>Não. Você pode entrar em contato, explicar seu objetivo e receber orientação sobre o atendimento mais indicado.</p>
+    </div>
+    <div class="faq-card reveal">
+      <h3>O agendamento é pelo WhatsApp?</h3>
+      <p>Sim. O canal de contato é direto, prático e permite tirar dúvidas antes de confirmar o seu horário.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="contact-section" id="contato">
+  <div class="sec-tag sec-tag-blue">Seu próximo passo</div>
+  <h2 class="h2-blue">Se seu cabelo merece um cuidado mais intencional, esse pode ser o seu momento de agendar</h2>
+  <div class="divider divider-blue"></div>
+  <div class="contact-card reveal">
+    <div class="contact-callout">Agenda pelo WhatsApp</div>
+    <p>Me chama para entender seu objetivo, tirar dúvidas e encontrar o melhor atendimento para o seu cabelo. O contato é direto, prático e pensado para você chegar mais segura ao seu horário.</p>
+    <div class="info-list">
+      <div class="info-row">
+        <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div class="info-text"><strong>Telefone / WhatsApp</strong>(38) 99911-7983</div>
+      </div>
+      <div class="info-row">
+        <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+        <div class="info-text"><strong>Endereço</strong>R. Santa Luzia, 283 - Cachoeira, Unaí - MG, 38610-280</div>
+      </div>
+      <div class="info-row">
+        <div class="info-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+        <div class="info-text"><strong>Horários</strong>Seg a Sex: 13h às 18h | Sáb: 08h às 16h</div>
+      </div>
+    </div>
+    <a class="btn-wpp-lg" href="https://wa.me/5538999117983?text=Ol%C3%A1%20Isabella!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.553 4.112 1.523 5.838L.057 23.804a.5.5 0 0 0 .614.63l6.101-1.598A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.686-.513-5.218-1.406l-.374-.22-3.878 1.016 1.034-3.772-.242-.388A9.945 9.945 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+      Quero falar com a Isabella agora
+    </a>
+    <div class="action-grid">
+      <a class="action-link route" href="https://www.google.com/maps/search/?api=1&query=R.%20Santa%20Luzia%2C%20283%20-%20Cachoeira%2C%20Unai%20-%20MG%2C%2038610-280" target="_blank" rel="noopener">Como chegar</a>
+      <a class="action-link google" href="https://www.google.com/search?q=Isabella+Marques+Cachos+Unai+MG" target="_blank" rel="noopener">Ver avaliações</a>
+      <a class="action-link instagram" href="https://www.instagram.com/isabellacachos_/" target="_blank" rel="noopener">Ver Instagram</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><span>Isabella Marques</span> · Especialista em cabelos ondulados, cacheados e crespos · Unaí/MG<br/>Valores sujeitos a alteração.</p>
+</footer>
+
+<a class="mobile-cta" href="https://wa.me/5538999117983?text=Ol%C3%A1%20Isabella!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener">
+  <span>Precisa de ajuda para escolher?</span>
+  <b>Falar agora</b>
+</a>
+
+<!-- MODAL -->
+<div class="modal-backdrop" id="backdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal" id="modal"></div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+  <button class="lb-close" type="button" id="lbFechar" aria-label="Fechar">&times;</button>
+  <button class="gnav prev" type="button" id="lbPrev" aria-label="Foto anterior">&#8249;</button>
+  <img id="lbImg" src="" alt=""/>
+  <p class="lb-caption" id="lbCaption"></p>
+  <button class="gnav next" type="button" id="lbNext" aria-label="Próxima foto">&#8250;</button>
+</div>
+
+<script>
+/* ═══════════════════════════════════════════════════════════
+   DADOS DOS SERVIÇOS
+   Para editar o catálogo, mexa APENAS nesta lista.
+
+   preco: {pix, cartao, parcelas:{n, valor}}  ou  null (= "sob consulta")
+   categoria: 'simples' | 'combo' | 'profundo'
+   fit: frase curta do card ("Ideal para: ...")
+   ═══════════════════════════════════════════════════════════ */
+const CATEGORIAS = {
+  simples:  {label:'Serviço simples',    plural:'Serviços simples'},
+  combo:    {label:'Combo',              plural:'Combos'},
+  profundo: {label:'Tratamento profundo',plural:'Tratamentos profundos'}
+};
+
+const SERVICOS = [
+  {
+    id:'corte-estrategico',
+    nome:'Corte Estratégico + Finalização + Secagem',
+    categoria:'simples',
+    icone:'✂️',
+    tagline:'',
+    fit:'Quem quer renovar o visual com um corte que respeita o fator encolhimento e a curvatura.',
+    desc:'Para quem deseja renovar o visual com um corte que respeita a estrutura natural do cabelo, valoriza o fator encolhimento e realça a beleza da sua curvatura.',
+    inclui:[
+      'Corte estratégico',
+      'Finalização',
+      'Secagem'
+    ],
+    preco:{pix:100, cartao:106, parcelas:{n:3, valor:36}}
+  },
+  {
+    id:'hnr-ozonio',
+    nome:'Tratamento HNR + Vapor de Ozônio',
+    categoria:'simples',
+    icone:'💧',
+    tagline:'Hidratação, Nutrição e Reconstrução — 3 em 1',
+    fit:'Quem precisa devolver brilho, força e saúde aos fios — sem mexer no corte.',
+    desc:'Uma opção perfeita para quem deseja revitalizar os fios, devolver brilho e saúde, com cuidado técnico e orientação personalizada — mesmo sem corte.',
+    inclui:[
+      'Blend de óleos vegetais',
+      'Vapor de ozônio',
+      'Finalização estruturada + secagem',
+      'Consultoria + avaliação capilar personalizada'
+    ],
+    preco:{pix:140, cartao:149, parcelas:{n:3, valor:50}}
+  },
+  {
+    id:'corte-hnr-ozonio',
+    nome:'Corte Estratégico + Tratamento HNR + Vapor de Ozônio',
+    categoria:'simples',
+    icone:'🌀',
+    tagline:'Hidratação, Nutrição e Reconstrução — 3 em 1',
+    fit:'Quem quer unir corte e tratamento funcional em um só atendimento.',
+    desc:'Ideal para quem quer um corte que valoriza as texturas naturais, respeita o fator encolhimento e proporciona equilíbrio aos fios com um tratamento funcional e eficaz.',
+    inclui:[
+      'Corte estratégico',
+      'Blend de óleos vegetais',
+      'Vapor de ozônio',
+      'Finalização estruturada + secagem',
+      'Consultoria + avaliação capilar personalizada'
+    ],
+    preco:{pix:170, cartao:180, parcelas:{n:3, valor:61}}
+  },
+  {
+    id:'combo-profundo',
+    nome:'Combo Profundo',
+    categoria:'combo',
+    icone:'💎',
+    tagline:'Corte & tratamento com consultoria personalizada',
+    fit:'Quem busca recuperação completa: força, brilho e equilíbrio, do corte à finalização.',
+    desc:'Para quem quer devolver força, brilho e equilíbrio ao cabelo com um tratamento completo e um corte pensado para realçar a beleza natural dos fios.',
+    inclui:[
+      'Corte estratégico',
+      'Acidificação',
+      'HNR (Hidratação, Nutrição e Reconstrução)',
+      'Vapor de ozonioterapia',
+      'Finalização + secagem',
+      'Consultoria capilar'
+    ],
+    preco:{pix:250, cartao:265, parcelas:{n:3, valor:89}}
+  },
+  {
+    /* ⚠️ PENDENTE — o texto original veio cortado em "+ Óle…" e SEM preço.
+       Completar a lista de itens e preencher `preco` quando a Isabella confirmar. */
+    id:'combo-umectacao',
+    nome:'Combo Umectação Profissional (Lipidioterapia)',
+    categoria:'combo',
+    icone:'🫒',
+    tagline:'Corte & tratamento com consultoria personalizada',
+    fit:'Quem sente os fios ressecados e precisa de nutrição profunda com óleos vegetais.',
+    desc:'Umectação profissional com manteigas e óleos vegetais de alta performance, combinada a um corte estratégico pensado para a sua curvatura.',
+    inclui:[
+      'Corte estratégico',
+      'Umectação profissional com manteiga de murumuru',
+      'Óleo de semente de uva',
+      'Óleo de pimenta rosa'
+    ],
+    preco:null
+  },
+  {
+    id:'peeling-terapeutico',
+    nome:'Peeling Terapêutico com Argila Preta & Carvão Ativado',
+    categoria:'profundo',
+    icone:'🌿',
+    tagline:'O tratamento mais profundo do salão',
+    fit:'Quem precisa cuidar do couro cabeludo — é o protocolo mais profundo do salão.',
+    /* ⚠️ PENDENTE — o texto original veio cortado em "como dermatite, ps…".
+       Completar a lista de condições quando a Isabella confirmar. */
+    desc:'Também é um tratamento anti-inflamatório capilar, altamente eficaz no controle de inflamações do couro cabeludo, como dermatite.',
+    inclui:[
+      'Peeling capilar detox',
+      'Acidificação com vitaminas e aminoácidos',
+      'Vapor de ozônio',
+      'Finalização',
+      'Avaliação e consultoria capilar'
+    ],
+    preco:{pix:250, cartao:265, parcelas:{n:3, valor:90}}
+  }
+];
+
+/* ═══════════════════════════════════════════════════════════
+   GALERIA DE RESULTADOS
+   Para trocar fotos: coloque o arquivo em fotos/ e edite esta lista.
+   wide:true = foto quase quadrada (antes & depois) ganha card largo.
+   ═══════════════════════════════════════════════════════════ */
+const GALERIA = [
+  {img:'fotos/antes-depois-definicao.jpg', legenda:'Do frizz à definição', badge:'Antes & Depois', wide:true},
+  {img:'fotos/bob-escuro-perfil.jpg',      legenda:'Corte bob + finalização'},
+  {img:'fotos/castanho-mel-costas.jpg',    legenda:'Castanho iluminado sob medida'},
+  {img:'fotos/antes-depois-cor.jpg',       legenda:'Cor corrigida, fios saudáveis', badge:'Antes & Depois', wide:true},
+  {img:'fotos/bob-dourado.jpg',            legenda:'Bob dourado com personalidade'},
+  {img:'fotos/loira-ondulada-longa.jpg',   legenda:'Ondas longas com movimento'},
+  {img:'fotos/resultado-7231.jpg',         legenda:'Morena iluminada + definição'},
+  {img:'fotos/castanho-iluminado-perfil.jpg', legenda:'Mechas que respeitam o cacho'},
+  {img:'fotos/cachos-fechados-mechas.jpg', legenda:'Cachos fechados, brilho natural'},
+  {img:'fotos/loiro-iluminado-costas.jpg', legenda:'Loiro vivo, fios tratados'},
+  {img:'fotos/castanho-ondulado-sorriso.jpg', legenda:'Leveza que aparece'},
+  {img:'fotos/mechas-mel-detalhe.jpg',     legenda:'Detalhe do acabamento'},
+  {img:'fotos/big-chop-doacao.jpg',        legenda:'Big chop com doação', badge:'Recomeço'}
+];
+
+/* ═══════════════════════════════════════════════════════════ */
+
+const WPP = '5538999117983';
+const grid = document.getElementById('grid');
+const chipsBox = document.getElementById('chips');
+const backdrop = document.getElementById('backdrop');
+const modal = document.getElementById('modal');
+const resultsSummary = document.getElementById('resultsSummary');
+
+let filtro = 'todos';
+let pagamento = 'pix';
+let ultimoFoco = null;
+
+const brl = n => 'R$ ' + n.toLocaleString('pt-BR', {minimumFractionDigits:0});
+
+const linkWpp = nome =>
+  'https://wa.me/' + WPP + '?text=' +
+  encodeURIComponent('Olá Isabella! Vi seu site e tenho interesse em: ' + nome + '. Podemos conversar?');
+
+const iconeWpp = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.553 4.112 1.523 5.838L.057 23.804a.5.5 0 0 0 .614.63l6.101-1.598A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.686-.513-5.218-1.406l-.374-.22-3.878 1.016 1.034-3.772-.242-.388A9.945 9.945 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>';
+
+/* Preço exibido no card, conforme a forma de pagamento escolhida */
+function precoCard(s){
+  if(!s.preco){
+    return '<div class="price-main"><span class="price-value consulta">Sob consulta</span></div>' +
+           '<p class="price-alt">Me chame no WhatsApp para saber o valor deste atendimento.</p>';
+  }
+  const p = s.preco;
+  let valor, caption, alt;
+  if(pagamento === 'pix'){
+    valor = brl(p.pix); caption = 'à vista no PIX ou dinheiro';
+    alt = 'Cartão <b>' + brl(p.cartao) + '</b> · ou <b>' + p.parcelas.n + 'x ' + brl(p.parcelas.valor) + '</b>';
+  } else if(pagamento === 'cartao'){
+    valor = brl(p.cartao); caption = 'no crédito ou débito';
+    alt = 'À vista <b>' + brl(p.pix) + '</b> · ou <b>' + p.parcelas.n + 'x ' + brl(p.parcelas.valor) + '</b>';
+  } else {
+    valor = p.parcelas.n + 'x ' + brl(p.parcelas.valor); caption = 'no cartão de crédito';
+    alt = 'À vista <b>' + brl(p.pix) + '</b> · cartão <b>' + brl(p.cartao) + '</b>';
+  }
+  return '<div class="price-main"><span class="price-value">' + valor + '</span>' +
+         '<span class="price-caption">' + caption + '</span></div>' +
+         '<p class="price-alt">' + alt + '</p>';
+}
+
+function cardHTML(s, i){
+  const visiveis = s.inclui.slice(0,3);
+  const resto = s.inclui.length - visiveis.length;
+  const chipsInc = visiveis.map(t => '<span class="inc">' + t + '</span>').join('') +
+    (resto > 0 ? '<span class="inc more">+' + resto + '</span>' : '');
+  const especial = s.categoria === 'profundo' ? ' profundo-card' : (s.categoria === 'combo' ? ' combo-card' : '');
+  return '<article class="svc' + especial + '" style="animation-delay:' + (i*45) + 'ms">' +
+    '<div class="svc-main">' +
+    '<div class="svc-top">' +
+      '<div class="svc-icon" aria-hidden="true">' + s.icone + '</div>' +
+      '<span class="svc-cat ' + s.categoria + '">' + CATEGORIAS[s.categoria].label + '</span>' +
+    '</div>' +
+    (s.tagline ? '<div class="svc-tagline">' + s.tagline + '</div>' : '<div class="svc-tagline blank" aria-hidden="true">&nbsp;</div>') +
+    '<h3 class="svc-name">' + s.nome + '</h3>' +
+    '<div class="svc-fit"><strong>Ideal para:</strong><span>' + s.fit + '</span></div>' +
+    '<div class="includes-label">O que inclui</div>' +
+    '<div class="svc-includes">' + chipsInc + '</div>' +
+    '</div>' +
+    '<div class="svc-commerce">' +
+    '<div class="svc-price">' + precoCard(s) + '</div>' +
+    '<div class="svc-actions">' +
+      '<button class="btn-detail" type="button" data-open="' + s.id + '">Ver detalhes</button>' +
+      '<a class="svc-wpp" href="' + linkWpp(s.nome) + '" target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre ' + s.nome + '">' + iconeWpp + 'Quero</a>' +
+    '</div>' +
+    '</div>' +
+  '</article>';
+}
+
+function render(){
+  const lista = filtro === 'todos' ? SERVICOS : SERVICOS.filter(s => s.categoria === filtro);
+  resultsSummary.textContent = lista.length + (lista.length === 1 ? ' atendimento disponível' : ' atendimentos disponíveis');
+  if(!lista.length){
+    grid.innerHTML = '<p class="empty">Nenhum serviço nesta categoria por enquanto.</p>';
+    return;
+  }
+
+  const descricoes = {
+    todos:'Compare as opções e escolha pelo objetivo, pelo nível de cuidado ou pelo investimento.',
+    simples:'Para objetivos pontuais, com técnica e orientação em cada etapa.',
+    combo:'Experiências completas que unem corte, tratamento e finalização.',
+    profundo:'Protocolos para necessidades específicas do couro cabeludo e dos fios.'
+  };
+  const titulo = filtro === 'todos' ? 'Todos os serviços' : CATEGORIAS[filtro].plural;
+  grid.innerHTML =
+    '<section class="category-section" aria-labelledby="catalogTitle">' +
+      '<header class="category-heading">' +
+        '<div><div class="category-kicker">Catálogo organizado</div><h2 id="catalogTitle">' + titulo + '</h2></div>' +
+        '<p>' + descricoes[filtro] + '</p>' +
+        '<span class="category-count">' + lista.length + (lista.length === 1 ? ' opção' : ' opções') + '</span>' +
+      '</header>' +
+      '<div class="catalog-grid">' + lista.map((s,i) => cardHTML(s,i)).join('') + '</div>' +
+    '</section>';
+}
+
+/* Chips de categoria, montados a partir do que existe na lista */
+function montarChips(){
+  const ordem = ['todos'].concat(Object.keys(CATEGORIAS).filter(c => SERVICOS.some(s => s.categoria === c)));
+  chipsBox.innerHTML = ordem.map(c => {
+    const n = c === 'todos' ? SERVICOS.length : SERVICOS.filter(s => s.categoria === c).length;
+    const label = c === 'todos' ? 'Todos' : CATEGORIAS[c].plural;
+    return '<button class="chip" type="button" data-cat="' + c + '" aria-pressed="' + (c === filtro) + '">' +
+           label + '<span class="chip-count">' + n + '</span></button>';
+  }).join('');
+}
+
+function aplicarFiltro(cat){
+  filtro = cat;
+  chipsBox.querySelectorAll('.chip').forEach(ch => ch.setAttribute('aria-pressed', ch.dataset.cat === cat));
+  render();
+}
+
+/* ── HERO: pergunta interativa ── */
+function initHeroAsk(){
+  const box = document.getElementById('heroAsk');
+  const btn = document.getElementById('heroWpp');
+  if(!box || !btn) return;
+  const HREF_PADRAO = btn.href;
+  const ROTULO_PADRAO = btn.querySelector('.btn-wpp-label').textContent;
+  box.addEventListener('click', e => {
+    const chip = e.target.closest('.ask-chip');
+    if(!chip) return;
+    const jaAtivo = chip.getAttribute('aria-pressed') === 'true';
+    box.querySelectorAll('.ask-chip').forEach(c => c.setAttribute('aria-pressed', String(c === chip && !jaAtivo)));
+    const rotulo = btn.querySelector('.btn-wpp-label');
+    if(jaAtivo){
+      btn.href = HREF_PADRAO;
+      rotulo.textContent = ROTULO_PADRAO;
+    } else {
+      btn.href = 'https://wa.me/' + WPP + '?text=' + encodeURIComponent('Olá Isabella! ' + chip.dataset.msg + '. Pode me ajudar?');
+      rotulo.textContent = 'Contar isso pra Isabella';
+    }
+    btn.classList.remove('btn-pop');
+    void btn.offsetWidth; /* reinicia a animação */
+    btn.classList.add('btn-pop');
+  });
+}
+
+/* ── GALERIA ── */
+function montarGaleria(){
+  const box = document.getElementById('gallery');
+  if(!box) return;
+  const cards = GALERIA.map((f, i) =>
+    '<figure class="gcard' + (f.wide ? ' wide' : '') + '" data-foto="' + i + '">' +
+      (f.badge ? '<span class="gbadge">' + f.badge + '</span>' : '') +
+      '<img src="' + f.img + '" alt="' + f.legenda + '" loading="lazy" decoding="async"/>' +
+      '<figcaption class="gcard-caption">' + f.legenda + '</figcaption>' +
+    '</figure>'
+  ).join('');
+  box.innerHTML = cards +
+    '<a class="gcard gcard-cta" href="https://www.instagram.com/isabellacachos_/" target="_blank" rel="noopener">' +
+      '<strong>Quer ver mais transformações?</strong>' +
+      '<span>Tem resultado novo toda semana</span>' +
+      '<span class="gcta-pill">Ver Instagram</span>' +
+    '</a>';
+
+  const passo = () => Math.min(box.clientWidth * .8, 660);
+  document.getElementById('gPrev').addEventListener('click', () => box.scrollBy({left:-passo(), behavior:'smooth'}));
+  document.getElementById('gNext').addEventListener('click', () => box.scrollBy({left: passo(), behavior:'smooth'}));
+  box.addEventListener('click', e => {
+    const c = e.target.closest('[data-foto]');
+    if(c) abrirFoto(+c.dataset.foto);
+  });
+}
+
+/* ── LIGHTBOX ── */
+const lb = document.getElementById('lb');
+const lbImg = document.getElementById('lbImg');
+const lbCaption = document.getElementById('lbCaption');
+let fotoAtual = 0;
+
+function abrirFoto(i){
+  fotoAtual = i;
+  const f = GALERIA[i];
+  lbImg.src = f.img;
+  lbImg.alt = f.legenda;
+  lbCaption.textContent = f.legenda;
+  ultimoFoco = document.activeElement;
+  lb.classList.add('open');
+  document.body.classList.add('no-scroll');
+  document.getElementById('lbFechar').focus();
+}
+function fecharFoto(){
+  lb.classList.remove('open');
+  document.body.classList.remove('no-scroll');
+  lbImg.src = '';
+  if(ultimoFoco) ultimoFoco.focus();
+}
+function navegarFoto(dir){
+  abrirFoto((fotoAtual + dir + GALERIA.length) % GALERIA.length);
+}
+if(lb){
+  document.getElementById('lbFechar').addEventListener('click', fecharFoto);
+  document.getElementById('lbPrev').addEventListener('click', e => {e.stopPropagation(); navegarFoto(-1);});
+  document.getElementById('lbNext').addEventListener('click', e => {e.stopPropagation(); navegarFoto(1);});
+  lb.addEventListener('click', e => { if(e.target === lb) fecharFoto(); });
+}
+
+/* ── MODAL ── */
+function abrir(id){
+  const s = SERVICOS.find(x => x.id === id);
+  if(!s) return;
+  ultimoFoco = document.activeElement;
+
+  const precos = s.preco
+    ? '<div class="modal-block"><div class="modal-block-title">Valores</div><div class="modal-prices">' +
+        '<div class="pcard hi"><div class="pcard-label">À vista</div><div class="pcard-value">' + brl(s.preco.pix) + '</div><div class="pcard-note">PIX ou dinheiro</div></div>' +
+        '<div class="pcard"><div class="pcard-label">Cartão</div><div class="pcard-value">' + brl(s.preco.cartao) + '</div><div class="pcard-note">crédito ou débito</div></div>' +
+        '<div class="pcard"><div class="pcard-label">Parcelado</div><div class="pcard-value">' + s.preco.parcelas.n + 'x ' + brl(s.preco.parcelas.valor) + '</div><div class="pcard-note">no crédito</div></div>' +
+      '</div></div>'
+    : '<div class="modal-block"><div class="modal-block-title">Valores</div>' +
+      '<div class="pcard"><div class="pcard-value" style="font-size:22px;font-style:italic;color:#7c6c74;">Sob consulta</div>' +
+      '<div class="pcard-note">Me chame no WhatsApp para saber o valor</div></div></div>';
+
+  modal.innerHTML =
+    '<button class="modal-close" type="button" id="fechar" aria-label="Fechar">&times;</button>' +
+    '<div class="modal-head">' +
+      '<div class="svc-icon" aria-hidden="true">' + s.icone + '</div>' +
+      '<div>' +
+        (s.tagline ? '<div class="modal-tagline">' + s.tagline + '</div>' : '') +
+        '<h2 id="modalTitle">' + s.nome + '</h2>' +
+      '</div>' +
+    '</div>' +
+    '<p class="modal-desc">' + s.desc + '</p>' +
+    '<div class="modal-block"><div class="modal-block-title">O que está incluso</div>' +
+      '<ul class="modal-list">' + s.inclui.map(t => '<li>' + t + '</li>').join('') + '</ul>' +
+    '</div>' +
+    precos +
+    '<a class="btn-wpp" href="' + linkWpp(s.nome) + '" target="_blank" rel="noopener">' + iconeWpp + 'Quero agendar este atendimento</a>' +
+    '<p class="modal-foot-note">Todos os atendimentos incluem avaliação capilar e consultoria personalizada.</p>';
+
+  backdrop.classList.add('open');
+  document.body.classList.add('no-scroll');
+  document.getElementById('fechar').focus();
+}
+
+function fechar(){
+  backdrop.classList.remove('open');
+  document.body.classList.remove('no-scroll');
+  modal.innerHTML = '';
+  if(ultimoFoco) ultimoFoco.focus();
+}
+
+/* ── EVENTOS ── */
+chipsBox.addEventListener('click', e => {
+  const b = e.target.closest('[data-cat]');
+  if(b) aplicarFiltro(b.dataset.cat);
+});
+
+document.querySelector('.pay-switch').addEventListener('click', e => {
+  const b = e.target.closest('[data-pay]');
+  if(!b) return;
+  pagamento = b.dataset.pay;
+  document.querySelectorAll('.pay-btn').forEach(p => p.setAttribute('aria-pressed', p === b));
+  render();
+});
+
+grid.addEventListener('click', e => {
+  const b = e.target.closest('[data-open]');
+  if(b) abrir(b.dataset.open);
+});
+
+backdrop.addEventListener('click', e => {
+  if(e.target === backdrop || e.target.closest('#fechar')) fechar();
+});
+
+document.addEventListener('keydown', e => {
+  if(e.key === 'Escape' && backdrop.classList.contains('open')) fechar();
+  if(lb && lb.classList.contains('open')){
+    if(e.key === 'Escape') fecharFoto();
+    if(e.key === 'ArrowLeft') navegarFoto(-1);
+    if(e.key === 'ArrowRight') navegarFoto(1);
+  }
+});
+
+/* ── REVEAL AO ROLAR ── */
+function initReveal(){
+  const els = [...document.querySelectorAll('.reveal')];
+  if(!els.length || !('IntersectionObserver' in window)) return; /* sem .js no <html>, tudo já é visível */
+  document.documentElement.classList.add('js');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, {threshold:.12, rootMargin:'0px 0px -40px'});
+  els.forEach(el => {
+    /* o que já está na tela aparece na hora, sem depender do observer */
+    const r = el.getBoundingClientRect();
+    if(r.top < innerHeight && r.bottom > 0){ el.classList.add('in'); return; }
+    const irmaos = [...el.parentElement.children].filter(x => x.classList.contains('reveal'));
+    el.style.transitionDelay = (irmaos.indexOf(el) % 4) * 70 + 'ms';
+    io.observe(el);
+  });
+}
+
+/* ── CONTADOR DOS NÚMEROS ── */
+function initStats(){
+  const nums = [...document.querySelectorAll('.stat-num[data-count]')];
+  if(!nums.length) return;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if(!en.isIntersecting) return;
+      io.unobserve(en.target);
+      const el = en.target, alvo = +el.dataset.count;
+      const pre = el.dataset.prefix || '', suf = el.dataset.suffix || '';
+      const t0 = performance.now(), dur = 1100;
+      const tick = t => {
+        const p = Math.min(1, (t - t0) / dur);
+        const e = 1 - Math.pow(1 - p, 3);
+        el.textContent = pre + Math.round(alvo * e) + suf;
+        if(p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+  }, {threshold:.5});
+  nums.forEach(n => io.observe(n));
+}
+
+/* ── MEDIÇÃO ──
+   Quando o site estiver publicado com Google Analytics 4 instalado (cole o
+   snippet do GA4 no <head>), cada clique de WhatsApp vira o evento
+   "whatsapp_click" automaticamente — sem GA4 instalado, não faz nada. */
+document.addEventListener('click', e => {
+  const a = e.target.closest('a[href*="wa.me"]');
+  if(a && typeof gtag === 'function'){
+    gtag('event', 'whatsapp_click', {origem: a.id || a.className.split(' ')[0] || 'link'});
+  }
+});
+
+montarChips();
+render();
+montarGaleria();
+initHeroAsk();
+initReveal();
+initStats();
+</script>
+</body>
+</html>
